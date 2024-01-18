@@ -7,6 +7,7 @@
     background-color: transparent;
     padding: 15px;
     transition: background-color 0.3s ease;
+    z-index: 2;
 }
 
 .navbar nav {
@@ -39,10 +40,10 @@
 
 .signup,
 .login {
-    background-color: #fff;
+    /* background-color: #fff; */
     color: #000;
     border: none;
-    padding: 8px 16px;
+    padding: 0px 16px;
     cursor: pointer;
     font-weight: bold;
     font-size: 14px;
@@ -51,4 +52,16 @@
 
 .right {
     margin-left: auto;
+}
+
+
+.page1
+{
+    background-color: red;
+    height: 100vh;
+}
+.page2
+{
+    background-color: rgb(0, 255, 34);
+    height: 100vh;
 }

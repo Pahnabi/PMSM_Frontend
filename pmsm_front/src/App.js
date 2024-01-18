@@ -5,9 +5,9 @@ import Landingpage from './Componenets/Home_page/landing_page';
 function App() {
   return (
     <div>
-      <p>Hello World</p>
+      {/* <p>Hello World</p> */}
       <Landingpage/>
-      <p>Hello World</p>
+      
     </div>
   );
 }

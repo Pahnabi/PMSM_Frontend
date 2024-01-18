@@ -1,5 +1,7 @@
 import React, {useEffect} from "react";
 import "./navbar.css";
+import VideoBackground from "./videobackground";
+
 
 const Landing_page = () => {
     useEffect(() => {
@@ -38,28 +40,16 @@ const Landing_page = () => {
               <li>
                 <a href="#">Contact</a>
               </li>
-          <div className="auth-buttons right">
-            {/* <button className="signup">Sign Up</button> */}
-            <button className="login">Login</button>
-          </div>
+              <div className="auth-buttons right">
+                {/* <button className="signup">Sign Up</button> */}
+                <button className="login">Login</button>
+              </div>
             </ul>
           </nav>
         </header>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
-        <h1>hellow workd 2</h1>
+        <VideoBackground/>
+        <div className="page1"></div>
+        <div className="page2"></div>
       </div>
     </>
   );
