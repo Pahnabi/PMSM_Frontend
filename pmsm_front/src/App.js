@@ -1,12 +1,17 @@
-import './App.css';
-import Landingpage from './Componenets/Home_page/landing_page';
+import React from "react";
+import Navbar from "./components/Navbar";
+import About from "./components/pages/About";
+import Services from "./components/pages/Services";
+import Contact from "./components/pages/Contact";
+import Home from "./components/pages/Home";
+
 
 
 function App() {
   return (
     <div>
-      {/* <p>Hello World</p> */}
-      <Landingpage/>
+       
+      {/*<Landingpage/>*/}
       
     </div>
   );
