@@ -26,10 +26,15 @@ const VideoBackground = () => {
       )}
       <div className="content">
         {" "}
-        <h1>
+        <h1 className="text-2xl font-sans">
           Empowering Mobility - Intelligent Monitoring and Management for
           Electric Vehicles
         </h1>
+        <br />
+        <br />
+        <p className="text-xl font-mono">
+          We develop innovative solutions for the future of mobility
+          </p>
       </div>
     </div>
   );
