@@ -5,6 +5,7 @@ import Services from "./components/pages/Services";
 import Contact from "./components/pages/Contact";
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
+import Footer from "./components/Footer";
 import VideoBackground from "./components/VideoBackground"
 
 
@@ -23,6 +24,7 @@ function App() {
         <div id="services"><Services /></div>
         <div id="contact"><Contact /></div>
         <div id="login"><Login/></div>
+        <Footer />
                  
         
 
