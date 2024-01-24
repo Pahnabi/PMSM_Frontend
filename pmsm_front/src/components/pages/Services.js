@@ -16,7 +16,22 @@ const servicesData = [
     title: 'Service 3',
     description: 'Sed malesuada urna nec ex hendrerit, in eleifend turpis tristique.',
   },
-  // Add more services as needed
+  {
+    icon: '🔧',
+    title: 'Service 1',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    icon: '🛠️',
+    title: 'Service 2',
+    description: 'Proin eu justo nec risus fringilla dapibus.',
+  },
+  {
+    icon: '⚙️',
+    title: 'Service 3',
+    description: 'Sed malesuada urna nec ex hendrerit, in eleifend turpis tristique.',
+  },
+  
 ];
 
 function Services() {

@@ -20,9 +20,17 @@ function Navbar() {
     return (
         <div className="fixed top-0 left-0 right-0 p-4 z-50 bg-gray-500 opacity-75">
             <div className="container mx-auto flex justify-between items-center">
-                <div className="text-6xl font-semibold font-serif text-red-700 cursor-pointer" onClick={scrollToTop}>
-                    <h1>Title</h1>
-                </div>
+            <div className="flex items-center">
+        <img
+          className="h-20 w-20 mr-6 rounded-full"  
+          src= "https://placekitten.com/200/287 "
+          alt="Logo"
+        />
+       
+        <div className="text-6xl font-extrabold font-sans  text-black cursor-pointer" onClick={scrollToTop}>
+          <h1>Evolution</h1>
+        </div>
+      </div>
                 <div className="hidden lg:flex space-x-7 text-3xl font-mono font-bold text-black">
                     <Link
                         to="home"
