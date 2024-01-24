@@ -6,7 +6,7 @@ import Team from "./components/pages/Team";
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
 import Footer from "./components/Footer";
-import VideoBackground from "./components/VideoBackground"
+// import VideoBackground from "./components/VideoBackground"
 
 
 
@@ -14,9 +14,6 @@ function App() {
   return (
     <React.Fragment>
     <div>
-    
-      
-
       <div className="App">
         <Navbar />
         <div id="home"><Home /></div>
