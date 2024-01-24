@@ -36,7 +36,7 @@ const servicesData = [
 
 function Services() {
   return (
-    <div className="p-8 md:p-16 h-screen">
+    <div className="p-8 md:p-16">
       <h1 className="text-4xl md:text-6xl font-extrabold font-mono text-center mb-8 md:mb-12">
         What do we provide?
       </h1>
