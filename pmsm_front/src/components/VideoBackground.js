@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./videobackground.css";
+import "./VideoBackground.css";
 
 const VideoBackground = () => {
   const [videoError, setVideoError] = useState(false);
