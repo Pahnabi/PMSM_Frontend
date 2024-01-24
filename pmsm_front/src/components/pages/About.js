@@ -2,7 +2,7 @@ import React from 'react';
 
 function About() {
     return (
-        <div className=" items-start justify-center">
+        <div className=" items-start justify-center h-[85vh]">
             <h1 className='text-6xl font-extrabold font-mono text-center '>
                 Transforming the distributed equipment industries with IoT and AI
             </h1>
