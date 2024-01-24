@@ -38,15 +38,13 @@ function Navbar1() {
   return (
     <div className={`navbar ${scrolling ? "solid" : "transparent"}`}>
       <div className="left-section">
-        <img src="your-logo.png" alt="Logo" className="logo" />
+        <img src="./Media/kgp-logo.png" alt="Logo" className="logo" />
         <h1 onClick={scrollToTop}>Evolution</h1>
       </div>
       <div className="right-section">
         <ul>
           <li>
-            <Link to="home" spy={true} smooth={true} duration={500}>
-              Home
-            </Link>
+            <Link onClick={scrollToTop}>Home</Link>
           </li>
           <li>
             <Link to="about" spy={true} smooth={true} duration={500}>

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Services.css';
 
 const servicesData = [
   {
@@ -36,7 +37,7 @@ const servicesData = [
 
 function Services() {
   return (
-    <div className="p-8 md:p-16">
+    <div className="starry-background p-8 md:p-16">
       <h1 className="text-4xl md:text-6xl font-extrabold font-mono text-center mb-8 md:mb-12">
         What do we provide?
       </h1>
@@ -46,7 +47,9 @@ function Services() {
             <div className="text-3xl mb-4">{service.icon}</div>
             <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
             <p className="text-gray-600">{service.description}</p>
-            <button className="mt-4 text-blue-500 hover:underline">Read More</button>
+            <button className="mt-4 text-blue-500 hover:underline">
+              Read More
+            </button>
           </div>
         ))}
       </div>

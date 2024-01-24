@@ -1,8 +1,8 @@
 import React from "react";
 // import Navbar from "./components/Navbar/Navbar";
 import Navbar1 from "./components/Navbar/Navbar1";
-import About from "./components/pages/About";
-import Services from "./components/pages/Services";
+import About from "./components/About/About";
+import Services from "./components/Services/Services";
 import Team from "./components/pages/Team";
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
