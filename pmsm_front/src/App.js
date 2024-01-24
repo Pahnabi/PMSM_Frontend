@@ -1,39 +1,36 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar/Navbar";
+import Navbar1 from "./components/Navbar/Navbar1";
 import About from "./components/pages/About";
 import Services from "./components/pages/Services";
 import Team from "./components/pages/Team";
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
 import Footer from "./components/Footer";
+// import ContactForm from "./components/ContactForm/ContactForm";
+
 // import VideoBackground from "./components/VideoBackground"
-
-
 
 function App() {
   return (
     <React.Fragment>
-    <div>
-      <div className="App">
-        <Navbar />
-        <div id="home"><Home /></div>
-        <div id="about"><About /></div>
-        <div id="services"><Services /></div>
-        <div id="team"><Team /></div>
-        <div id="login"><Login/></div>
+      <div>
+        <Navbar1 />
+        <Home />
+        <div id="about">
+          <About />
+        </div>
+        <div id="services">
+          <Services />
+        </div>
+        <div id="team">
+          <Team />
+        </div>
+        <Login />
+        {/* <ContactForm /> */}
         <Footer />
-                 
-        
-
-        
-                    
-
-       
-      {/*<Landingpage/>*/}
-
+        {/*<Landingpage/>*/}
       </div>
-      
-    </div>
     </React.Fragment>
   );
 }
