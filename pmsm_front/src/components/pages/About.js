@@ -6,7 +6,7 @@ function About() {
             <h1 className='text-6xl font-extrabold font-mono text-center '>
                 Transforming the distributed equipment industries with IoT and AI
             </h1>
-            <br />
+            {/*<br />
             <div className="flex w-full">
                 
                 <div className="flex overflow-y-auto p-4 w-2/3">
@@ -28,10 +28,10 @@ function About() {
                 </div>
                 
                 {/* Right part with an image */}
-                <div className="flex p-4 w-1/3">
+                {/*<div className="flex p-4 w-1/3">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Google_Maps_Android_11.png/200px-Google_Maps_Android_11.png" alt="Description of the image" className="w-full h-[60vh] object-cover" />
                 </div>
-            </div>
+    </div>*/}
         </div>
     );
 }

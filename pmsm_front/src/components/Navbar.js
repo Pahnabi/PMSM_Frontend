@@ -18,8 +18,8 @@ function Navbar() {
     };
 
     return (
-        <div className="fixed top-0 left-0 right-0 p-4 z-50 bg-gray-500 opacity-75">
-            <div className="container mx-auto flex justify-between items-center">
+        <div className="fixed top-0 left-0 right-0 p-2 z-40 bg-gray-500 opacity-75 ">
+            <div className="container mx-auto flex justify-between items-center ">
             <div className="flex items-center">
         <img
           className="h-20 w-20 mr-6 rounded-full"  
@@ -63,14 +63,14 @@ function Navbar() {
                         Services
                     </Link>
                     <Link
-                        to="contact"
+                        to="team"
                         spy={true}
                         smooth={true}
                         offset={-70}
                         duration={500}
                         className="hover:text-red-700 cursor-pointer hover:underline"
                     >
-                        Contact
+                        Team
                     </Link>
                     <Link
                         to="login"
