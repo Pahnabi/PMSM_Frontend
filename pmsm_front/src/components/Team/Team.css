@@ -1,3 +1,13 @@
 .team-page {
-background-image: linear-gradient(to right top, #ddbe9b, #e3c9a8, #e9d4b5, #efdfc2, #f6ead0, #f5e6ca, #f4e2c3, #f3debd, #eccaa3, #e7b58b, #e2a076, #dd8965);
+    background-image: linear-gradient(to right top, #ddbe9b, #e3c9a8, #e9d4b5, #efdfc2, #f6ead0, #f5e6ca, #f4e2c3, #f3debd, #eccaa3, #e7b58b, #e2a076, #dd8965);
+}
+
+.team-heading {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin: 0px 5vh;
+    margin-bottom: 8vh;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #561C24;
 }

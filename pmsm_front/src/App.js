@@ -5,7 +5,7 @@ import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import Team from "./components/Team/Team";
 import Home from "./components/pages/Home";
-import Login from "./components/pages/Login";
+// import Login from "./components/pages/Login";
 import Footer from "./components/Footer";
 // import ContactForm from "./components/ContactForm/ContactForm";
 
@@ -26,7 +26,7 @@ function App() {
         <div id="team">
           <Team />
         </div>
-        <Login />
+        {/* <Login /> */}
         {/* <ContactForm /> */}
         <Footer />
         {/*<Landingpage/>*/}

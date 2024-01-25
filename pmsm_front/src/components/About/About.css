@@ -15,12 +15,25 @@
     font-family: 'Oswald', sans-serif;
     text-align: center;
     margin: 0px 5vh;
-    padding: 5vh 0vh;
+    padding-top: 5vh;
     font-size: 2.5rem;
     font-weight: 900;
     color: #561C24;
     /* text-shadow: 2px 2px 5px #fff; */
 }
+.about-content
+{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin: 0px 20vh;
+    padding-top: 2vh;
+    /* padding-bottom: 5vh ; */
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4f4f4f;
+    /* text-shadow: 2px 2px 5px #fff; */
+}
+
 .image-about {
     /* display: inline-block; */
     background-image: url('../../Media/about.webp');
