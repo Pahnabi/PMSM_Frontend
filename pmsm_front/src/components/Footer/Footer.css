@@ -1,0 +1,11 @@
+.footer-heading
+{
+    font-family: 'Oswald', sans-serif;
+        text-align: center;
+        margin: 0px 5vh;
+        padding: 5vh 0px;
+        /* margin: 8vh; */
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #ffffff;
+}

@@ -6,7 +6,7 @@ import Services from "./components/Services/Services";
 import Team from "./components/Team/Team";
 import Home from "./components/pages/Home";
 // import Login from "./components/pages/Login";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 // import ContactForm from "./components/ContactForm/ContactForm";
 
 // import VideoBackground from "./components/VideoBackground"
