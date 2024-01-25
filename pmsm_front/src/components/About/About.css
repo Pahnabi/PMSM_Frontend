@@ -4,7 +4,6 @@
     /* position: fixed; */
     /* background-color: #E8D8C4; */
     border-top: 10px solid #000000;
-    background-image: linear-gradient(to right top, #c7b7a3, #d5c5ae, #e2d3ba, #f0e1c5, #fdf0d1);
     background-image: linear-gradient(to right top, #ddbe9b, #e3c9a8, #e9d4b5, #efdfc2, #f6ead0, #f5e6ca, #f4e2c3, #f3debd, #eccaa3, #e7b58b, #e2a076, #dd8965);
     min-height: 100vh;
     display: flex;
