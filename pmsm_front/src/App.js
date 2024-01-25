@@ -3,7 +3,7 @@ import React from "react";
 import Navbar1 from "./components/Navbar/Navbar1";
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
-import Team from "./components/pages/Team";
+import Team from "./components/Team/Team";
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
 import Footer from "./components/Footer";

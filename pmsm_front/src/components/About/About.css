@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 .about-page
 {
-    background-color: #240532;
+    /* position: fixed; */
+    /* background-color: #E8D8C4; */
+    border-top: 10px solid #000000;
+    background-image: linear-gradient(to right top, #c7b7a3, #d5c5ae, #e2d3ba, #f0e1c5, #fdf0d1);
+    background-image: linear-gradient(to right top, #ddbe9b, #e3c9a8, #e9d4b5, #efdfc2, #f6ead0, #f5e6ca, #f4e2c3, #f3debd, #eccaa3, #e7b58b, #e2a076, #dd8965);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,7 +19,7 @@
     padding: 5vh 0vh;
     font-size: 2.5rem;
     font-weight: 900;
-    color: #f9d0ee;
+    color: #561C24;
     /* text-shadow: 2px 2px 5px #fff; */
 }
 .image-about {
@@ -27,5 +31,5 @@
     width: 70vw;
     margin: 5vh auto;
     margin-bottom: 10vh;
-    box-shadow: 0px 0px 50px rgb(8, 8, 8);
+    box-shadow: 0px 0px 50px rgb(244, 244, 244);
 }
