@@ -7,6 +7,7 @@ import Team from "./components/Team/Team";
 import Home from "./components/pages/Home";
 // import Login from "./components/pages/Login";
 import Footer from "./components/Footer/Footer";
+// import "bootstrap/dist/css/bootstrap.min.css";
 // import ContactForm from "./components/ContactForm/ContactForm";
 
 // import VideoBackground from "./components/VideoBackground"
