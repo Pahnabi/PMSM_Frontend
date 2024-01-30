@@ -39,7 +39,7 @@ function Navbar1() {
     <div className={`navbar ${scrolling ? "solid" : "transparent"}`}>
       <div className="left-section">
         <img src="./Media/kgp_logo.png" alt="Logo" className="logo" />
-        <h1 onClick={scrollToTop}>Evolution</h1>
+        <h1 onClick={scrollToTop}>AI4ICPS</h1>
       </div>
       <div className="right-section">
         <ul>
