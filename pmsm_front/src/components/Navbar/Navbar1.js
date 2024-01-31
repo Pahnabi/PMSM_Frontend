@@ -2,22 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./Navbar1.css";
-import Login from "../LoginSignup/Login";
-// import LoginSignupModal from "../LoginSignup/LoginSignupModal";
 
-function Navbar1() {
+function Navbar1(props) {
   const [scrolling, setScrolling] = useState(false);
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // const closeModal = () => {
-  //   setIsModalOpen(false);
-  // };
-
-  const [modal, setModal] = useState(false);
-
-  const toggleModal = () => {
-    setModal(!modal);
-  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,14 +56,16 @@ function Navbar1() {
             </Link>
           </li>
           <li>
-            <button onClick={toggleModal}>Login</button>
+            <button
+              onClick={() => {
+                props.setOpenModal();
+              }}
+            >
+              Login
+            </button>
           </li>
         </ul>
       </div>
-      {/* <LoginSignupModal isOpen={isModalOpen} onRequestClose={closeModal} /> */}
-      {modal && (
-        <Login setOpenModal={toggleModal}/> 
-      )}
     </div>
   );
 }

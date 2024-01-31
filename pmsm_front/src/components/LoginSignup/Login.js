@@ -7,7 +7,7 @@ const Login = (props) => {
       <div className="modal">
         <div
           onClick={() => {
-            props.setOpenModal(false);
+            props.setOpenModal();
           }}
           className="overlay"
         ></div>
@@ -24,7 +24,7 @@ const Login = (props) => {
           <button
             className="close-modal"
             onClick={() => {
-              props.setOpenModal(false);
+              props.setOpenModal();
             }}
           >
             CLOSE
