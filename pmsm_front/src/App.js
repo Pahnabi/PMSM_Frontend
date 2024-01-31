@@ -27,10 +27,7 @@ function App() {
         <div id="team">
           <Team />
         </div>
-        {/* <Login /> */}
-        {/* <ContactForm /> */}
         <Footer />
-        {/*<Landingpage/>*/}
       </div>
     </React.Fragment>
   );
