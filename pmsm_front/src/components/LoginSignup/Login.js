@@ -21,6 +21,7 @@ const Login = (props) => {
             quos molestiae rem aspernatur dicta tenetur. Sunt placeat tempora
             vitae enim incidunt porro fuga ea.
           </p>
+          
           <button
             className="close-modal"
             onClick={() => {

@@ -36,6 +36,7 @@ const VideoBackground = () => {
           We develop innovative solutions for the future of mobility
           </p>
       </div>
+      
     </div>
   );
 };

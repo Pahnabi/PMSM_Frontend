@@ -38,7 +38,7 @@ function Navbar1(props) {
       <div className="right-section">
         <ul>
           <li>
-            <Link onClick={scrollToTop}>Home</Link>
+            <Link to="home" onClick={scrollToTop}>Home</Link>
           </li>
           <li>
             <Link to="about" spy={true} smooth={true} duration={500}>
