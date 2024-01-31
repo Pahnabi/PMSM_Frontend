@@ -9,6 +9,7 @@ function Navbar1(props) {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
+        // alert("hi");
         setScrolling(true);
       } else {
         setScrolling(false);
@@ -30,15 +31,17 @@ function Navbar1(props) {
   };
 
   return (
-    <div className={`navbar ${scrolling ? "solid" : "transparent"}`}>
+    <div className={`navbar1 ${scrolling ? "solid" : "transparent"}`}>
       <div className="left-section">
         <img src="./Media/kgp_logo.png" alt="Logo" className="logo" />
-        <h1 onClick={scrollToTop}>AI4ICPS</h1>
+        <h1 className="navbar-content-heading" onClick={scrollToTop}>AI4ICPS</h1>
       </div>
       <div className="right-section">
         <ul>
           <li>
-            <Link to="home" onClick={scrollToTop}>Home</Link>
+            <Link to="home" onClick={scrollToTop}>
+              Home
+            </Link>
           </li>
           <li>
             <Link to="about" spy={true} smooth={true} duration={500}>
