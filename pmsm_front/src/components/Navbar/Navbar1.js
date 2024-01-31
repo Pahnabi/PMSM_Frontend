@@ -36,6 +36,7 @@ function Navbar1(props) {
         <img src="./Media/kgp_logo.png" alt="Logo" className="logo" />
         <h1 className="navbar-content-heading" onClick={scrollToTop}>AI4ICPS</h1>
       </div>
+      {!props.loginstatus &&(
       <div className="right-section">
         <ul>
           <li>
@@ -68,7 +69,21 @@ function Navbar1(props) {
             </button>
           </li>
         </ul>
-      </div>
+      </div>)}
+      {props.loginstatus &&(
+      <div className="right-section">
+        <ul>
+          <li>
+            <button
+              onClick={() => {
+                props.setOpenModal();
+              }}
+            >
+              Logout
+            </button>
+          </li>
+        </ul>
+      </div>)}
     </div>
   );
 }

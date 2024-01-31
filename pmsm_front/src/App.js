@@ -13,15 +13,21 @@ import UserProfile from "./components/UserProfile/UserProfile"; // Import your U
 
 function App() {
   const [modal, setModal] = useState(false);
+  const [loginstatus, setLoginstatus] = useState(false);
 
   const toggleModal = () => {
     setModal(!modal);
   };
 
+  const toggleLoginstatus = () => {
+    // alert("Login successful");
+    setLoginstatus(!loginstatus);
+  };
+
   return (
     <Router>
       <>
-        <Navbar1 setOpenModal={toggleModal} />
+        <Navbar1 setOpenModal={toggleModal} loginstatus={loginstatus} />
         <Routes>
           <Route
             path="/"
@@ -46,7 +52,13 @@ function App() {
 
           <Route exact path="/profile" element={<UserProfile />} />
         </Routes>
-        {modal && <Login setOpenModal={toggleModal} />}
+        {modal && (
+          <Login
+            setOpenModal={toggleModal}
+            setToggleLogStatus={toggleLoginstatus}
+            loginstatus={loginstatus}
+          />
+        )}
       </>
     </Router>
   );
