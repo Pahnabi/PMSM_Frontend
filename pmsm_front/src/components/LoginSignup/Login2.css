@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -41,7 +42,7 @@ body {
 
 .login2-main input {
   width: 60%;
-  height: 20px;
+  height: 40px;
   background: #e0dede;
   justify-content: center;
   display: flex;
@@ -53,8 +54,8 @@ body {
 }
 
 .login2-main button {
-  width: 60%;
-  height: 40px;
+  width: 50%;
+  height: 30px;
   margin: 10px auto;
   justify-content: center;
   display: block;
