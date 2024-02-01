@@ -1,61 +1,59 @@
-import React from 'react';
-import './Services.css';
+import React from "react";
+import "./Services.css";
 
 const servicesData = [
   {
-    icon: '🔧',
-    title: 'Service 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: "🔧",
+    title: "Scheduled Reports",
+    description:
+      "Allows users to automatically schedule the delivery of reports at specific intervals to the concerned recipients. Multiple file formats are supported like PDFs, CSV, etc.",
   },
   {
-    icon: '🛠️',
-    title: 'Service 2',
-    description: 'Proin eu justo nec risus fringilla dapibus.',
+    icon: "🛠️",
+    title: "Remote Monitoring & Control",
+    description:
+      "Obtain real-time data from devices about their performance and also interact with them remotely to detect and resolve issue proactively.",
   },
   {
-    icon: '⚙️',
-    title: 'Service 3',
-    description: 'Sed malesuada urna nec ex hendrerit, in eleifend turpis tristique.',
+    icon: "⚙️",
+    title: "User Management",
+    description:
+      "Unique access management feature allows user to manage their level of access based on roles and permissions.",
   },
   {
-    icon: '🔧',
-    title: 'Service 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: "🔧",
+    title: "Scheduled Triggers",
+    description:
+      "Allow robust scheduling of actions to automatically trigger an event on predefined values and anomaly conditions.",
   },
-  {
-    icon: '🛠️',
-    title: 'Service 2',
-    description: 'Proin eu justo nec risus fringilla dapibus.',
-  },
-  {
-    icon: '⚙️',
-    title: 'Service 3',
-    description: 'Sed malesuada urna nec ex hendrerit, in eleifend turpis tristique.',
-  },
-  
 ];
 
 function Services() {
   return (
-    <div className="services-page p-8 md:p-16">
-      <h1 className='services-heading'>
-        What do we provide?
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {servicesData.map((service, index) => (
-          <div key={index} className="bg-white p-6 rounded-md shadow-md">
-            <div className="text-3xl mb-4">{service.icon}</div>
-            <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
-            <p className="text-gray-600">{service.description}</p>
-            <button className="mt-4 text-blue-500 hover:underline">
+    <div className="services-page">
+      <h1 className="services-heading">What do we provide?</h1>
+      <div className="row">
+        <div className="col1">
+          <img src="/Media/services-image.webp" alt="Description of the image" />
+            
+        </div>
+        <div className="col2">
+          {servicesData.map((service, index) => (
+            <div key={index} className="service-card bg-white rounded-md shadow-md">
+              <div className="service-content-heading">
+                <div className="service-icon text-3xl mb-4">{service.icon}</div>
+                <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
+              </div>
+              <p className="text-gray-600">{service.description}</p>
+              {/* <button className="mt-4 text-blue-500 hover:underline">
               Read More
-            </button>
-          </div>
-        ))}
+            </button> */}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
 
 export default Services;
-

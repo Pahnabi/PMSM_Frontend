@@ -15,3 +15,52 @@
     color: #561C24;
 
 }
+
+.service-content-heading {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1rem
+}
+
+.service-icon {
+    margin-right: 20px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.col1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px 20px;
+}
+
+
+.col2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.service-card
+{
+    width: 20vw;
+    margin: 5px;
+    padding: 20px;
+    /* font-size: 0.5rem; */
+    /* background-color: red; */
+    transition: 1s ease;
+}
+.service-card:hover
+{
+background-image: linear-gradient(to right top, #ffe382, #fde78f, #fbec9d, #faefaa, #f9f3b7, #f7f5bb, #f6f7bf, #f4f9c3, #effabf, #eafcbc, #e3fdb9, #dcffb7);box-shadow: 0px 0px 20px rgb(161, 161, 161);
+cursor: pointer;
+transform: scale(1.05);
+}
