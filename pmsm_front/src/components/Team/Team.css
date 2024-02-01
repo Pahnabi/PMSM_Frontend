@@ -4,18 +4,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: auto;
+    padding-top:  20px;
+    padding-bottom: 30px;
 }
 
 .team-content
 {
     display: flex;
-    
+    /* background-color: white; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5px;
 }
 
 .team-heading {
     font-family: 'Oswald', sans-serif;
     text-align: center;
-    margin: 0px 5vh;
+    margin: 5vh;
     margin-bottom: 8vh;
     font-size: 2.5rem;
     font-weight: 900;
