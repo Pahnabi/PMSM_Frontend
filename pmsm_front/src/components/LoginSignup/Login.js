@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import "./Login2.css";
 
 const Login = (props) => {
   // const { setToggleLogStatus } = props;
@@ -13,41 +14,55 @@ const Login = (props) => {
           }}
           className="overlay"
         ></div>
-        <div className="modal-content">
-          {/* <h2>Hello Modal</h2> */}
-          <p>click below</p>
-          {!props.loginstatus && (
-            <Link
-              to="/profile"
-              onClick={() => {
-                props.setOpenModal();
-                props.setToggleLogStatus();
-              }}
-            >
-              <button>Login</button>
-            </Link>
-          )}
-          {props.loginstatus && (
-            <Link
-              to="/"
-              onClick={() => {
-                props.setOpenModal();
-                props.setToggleLogStatus();
-              }}
-            >
-              <button>Logout</button>
-            </Link>
-          )}
-          <p>click above</p>
+        <div className="login2-main modal-content">
+          <input type="checkbox" id="login2-chk" aria-hidden="true" />
 
-          <button
-            className="close-modal"
-            onClick={() => {
-              props.setOpenModal();
-            }}
-          >
-            CLOSE
-          </button>
+          <div className="login2-signup">
+            <form>
+              <label htmlFor="login2-chk" aria-hidden="true">
+                Sign Up
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email ID"
+                required=""
+              />
+              <input
+                type="text"
+                name="txt"
+                placeholder="User Name"
+                required=""
+              />
+              <input
+                type="Password"
+                name="pswd"
+                placeholder="Password"
+                required=""
+              />
+              <button>Sign Up</button>
+            </form>
+          </div>
+          <div className="login2-login">
+            <form>
+              <label htmlFor="login2-chk" aria-hidden="true">
+                Login
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email ID"
+                required=""
+              />
+              <input
+                type="Password"
+                name="pswd"
+                placeholder="Password"
+                required=""
+              />
+              <button>Login</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
