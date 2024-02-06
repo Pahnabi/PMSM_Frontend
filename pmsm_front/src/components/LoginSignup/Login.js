@@ -26,6 +26,12 @@ const Login = (props) => {
                 X
               </p>
             </div>
+
+            {/* login */}
+            {/* login */}
+            {/* login */}
+            {/* login */}
+            {/* login */}
             <form>
               <label htmlFor="login2-chk" aria-hidden="true">
                 Login
@@ -46,6 +52,12 @@ const Login = (props) => {
               <button>Login</button>
             </form>
           </div>
+
+          {/* Sign-up */}
+          {/* Sign-up */}
+          {/* Sign-up */}
+          {/* Sign-up */}
+          {/* Sign-up */}
           <div className="login2-login">
             <form>
               <label
@@ -74,34 +86,18 @@ const Login = (props) => {
                   placeholder="User Name"
                   required=""
                 />
-                {/* <div className="user-type-input"> */}
-                  {/* <div className="optionA">
-                    <input
-                      type="checkbox"
-                      id="optionA"
-                      name="optionA"
-                      value="optionA"
-                    />
-                    <p>Vehicle Owner</p>
-                  </div>
-                  <div className="optionB">
-                    <input
-                      type="checkbox"
-                      id="optionB"
-                      name="optionB"
-                      value="optionB"
-                    />
-                    <p>Vehicle Manufacturer</p>
-                  </div> */}
-                  {/* <label for="optionB">Option B</label> */}
-                  <select className="user-type" name="dropdown">
-                    <option className="user-type-initial-option" value="" disabled selected>
-                      Select User Type
-                    </option>
-                    <option value="option1">Owner</option>
-                    <option value="option2">Manufacturer</option>
-                  </select>
-                {/* </div> */}
+                <select className="user-type" name="dropdown">
+                  <option
+                    className="user-type-initial-option"
+                    value=""
+                    disabled
+                    selected
+                  >
+                    Select User Type
+                  </option>
+                  <option value="option1">Owner</option>
+                  <option value="option2">Manufacturer</option>
+                </select>
 
                 <input
                   type="tel"
