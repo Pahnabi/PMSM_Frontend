@@ -86,6 +86,7 @@ body {
   justify-content: center;
   display: flex;
   margin: 40px;
+  margin-bottom: 30px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.5s ease-in-out;
@@ -135,13 +136,14 @@ body {
   transition: 0.8s ease-in-out;
 }
 
-.login2-login label {
+.login2-login .sign-up-heading {
   color: #573b8a;
   transform: scale(0.6);
   padding-top: 20px;
+  margin-bottom: 10px;
 }
 
-#login2-chk:checked~.login2-signup label {
+#login2-chk:checked~.login2-signup .sign-up-heading {
   transform: scale(0.6);
 }
 
@@ -173,4 +175,28 @@ body {
 
 .modal-closer p {
   display: block;
+}
+
+.signup-contents {
+  height: 55vh;
+  overflow: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #220634 #f1f1f1;
+}
+
+.user-type{
+  width: 60%;
+  height: 30px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 0px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #0f071e;
+}
+.user-type .user-type-initial-option{
+  color: gray;
 }

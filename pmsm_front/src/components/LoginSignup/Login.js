@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./Login.css";
 
 const Login = (props) => {
@@ -30,16 +30,11 @@ const Login = (props) => {
               <label htmlFor="login2-chk" aria-hidden="true">
                 Login
               </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email ID"
-                required=""
-              />
+              <input type="text" name="txt" placeholder="User Id" required="" />
               <input
                 type="text"
                 name="txt"
-                placeholder="User Name"
+                placeholder="Vehicle Id"
                 required=""
               />
               <input
@@ -53,30 +48,101 @@ const Login = (props) => {
           </div>
           <div className="login2-login">
             <form>
-              <label htmlFor="login2-chk" aria-hidden="true">
-                Sign Up
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email ID"
-                required=""
-              />
-              <input
-                type="Password"
-                name="pswd"
-                placeholder="Password"
-                required=""
-              />
-              <button>Sign Up</button>
-
               <label
-                className="login-instead"
+                className="sign-up-heading"
                 htmlFor="login2-chk"
                 aria-hidden="true"
               >
-                Login instead
+                Sign Up
               </label>
+              <div className="signup-contents">
+                <input
+                  type="text"
+                  name="txt"
+                  placeholder="User Name"
+                  required=""
+                />
+                <input
+                  type="text"
+                  name="txt"
+                  placeholder="Vehicle Id"
+                  required=""
+                />
+                <input
+                  type="text"
+                  name="txt"
+                  placeholder="User Name"
+                  required=""
+                />
+                {/* <div className="user-type-input"> */}
+                  {/* <div className="optionA">
+                    <input
+                      type="checkbox"
+                      id="optionA"
+                      name="optionA"
+                      value="optionA"
+                    />
+                    <p>Vehicle Owner</p>
+                  </div>
+                  <div className="optionB">
+                    <input
+                      type="checkbox"
+                      id="optionB"
+                      name="optionB"
+                      value="optionB"
+                    />
+                    <p>Vehicle Manufacturer</p>
+                  </div> */}
+                  {/* <label for="optionB">Option B</label> */}
+                  <select className="user-type" name="dropdown">
+                    <option className="user-type-initial-option" value="" disabled selected>
+                      Select User Type
+                    </option>
+                    <option value="option1">Owner</option>
+                    <option value="option2">Manufacturer</option>
+                  </select>
+                {/* </div> */}
+
+                <input
+                  type="tel"
+                  name="contactNumber"
+                  placeholder="Contact Number"
+                  required=""
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email ID"
+                  required=""
+                />
+                <input
+                  type="text"
+                  name="tet"
+                  placeholder="Address"
+                  required=""
+                />
+                <input
+                  type="Password"
+                  name="pswd"
+                  placeholder="Password"
+                  required=""
+                />
+                <input
+                  type="Password"
+                  name="pswd2"
+                  placeholder="Re Enter Password"
+                  required=""
+                />
+                <button>Sign Up</button>
+
+                <label
+                  className="login-instead"
+                  htmlFor="login2-chk"
+                  aria-hidden="true"
+                >
+                  Login instead
+                </label>
+              </div>
             </form>
           </div>
         </div>
