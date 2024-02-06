@@ -1,9 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
 // import { Link } from "react-router-dom";
+import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
+
+
 import "./Login.css";
 
 const Login = (props) => {
-  // const { setToggleLogStatus } = props;
+  const navigate = useNavigate();
+  const [userid, setUserid] = useState("");
+  const [vehicleid, setVehicleid] = useState("");
+  const [password, setPassword] = useState("");
+
+  // login sumbit
+  async function submitLogin(e) {
+    e.preventDefault();
+
+    try {
+      await axios
+        .post("http://localhost:8000/login", {
+          userid,
+          vehicleid,
+          password,
+        })
+        .then((res) => {
+          if (res.data === "exist") {
+            // history("/home", { state: { id: email } });
+            alert("Login successful");
+            navigate("/profile");
+            props.setOpenModal();
+            props.setToggleLogStatus();
+          } else if (res.data === "notexist") {
+            alert("User have not sign up");
+          }
+        })
+        .catch((e) => {
+          alert("wrong details");
+          console.log(e);
+        });
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  // signup submit 
+  async function submit(e) {
+    e.preventDefault();
+
+    try {
+      await axios
+        .post("http://localhost:8000/signup", {
+          userid,
+          vehicleid,
+          password,
+        })
+        .then((res) => {
+          if (res.data === "exist") {
+            alert("User already exists");
+          } else if (res.data === "notexist") {
+            // history("/home", { state: { id: email } });
+            alert("Signup Successful");
+          }
+        })
+        .catch((e) => {
+          alert("wrong details");
+          console.log(e);
+        });
+    } catch (e) {
+      console.log(e);
+    }
+  }
   return (
     <div>
       <div className="modal">
@@ -32,24 +98,38 @@ const Login = (props) => {
             {/* login */}
             {/* login */}
             {/* login */}
-            <form>
+            <form action="POST">
               <label htmlFor="login2-chk" aria-hidden="true">
                 Login
               </label>
-              <input type="text" name="txt" placeholder="User Id" required="" />
+              <input
+                type="text"
+                name="txt"
+                placeholder="User Id"
+                required=""
+                onChange={(e) => {
+                  setUserid(e.target.value);
+                }}
+              />
               <input
                 type="text"
                 name="txt"
                 placeholder="Vehicle Id"
                 required=""
+                onChange={(e) => {
+                  setVehicleid(e.target.value);
+                }}
               />
               <input
                 type="Password"
                 name="pswd"
                 placeholder="Password"
                 required=""
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
               />
-              <button>Login</button>
+              <button onClick={submitLogin}>Login</button>
             </form>
           </div>
 
@@ -59,7 +139,7 @@ const Login = (props) => {
           {/* Sign-up */}
           {/* Sign-up */}
           <div className="login2-login">
-            <form>
+            <form action="POST">
               <label
                 className="sign-up-heading"
                 htmlFor="login2-chk"
@@ -73,12 +153,18 @@ const Login = (props) => {
                   name="txt"
                   placeholder="User Name"
                   required=""
+                  onChange={(e) => {
+                    setUserid(e.target.value);
+                  }}
                 />
                 <input
                   type="text"
                   name="txt"
                   placeholder="Vehicle Id"
                   required=""
+                  onChange={(e) => {
+                    setVehicleid(e.target.value);
+                  }}
                 />
                 <input
                   type="text"
@@ -122,6 +208,9 @@ const Login = (props) => {
                   name="pswd"
                   placeholder="Password"
                   required=""
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
                 />
                 <input
                   type="Password"
@@ -129,7 +218,7 @@ const Login = (props) => {
                   placeholder="Re Enter Password"
                   required=""
                 />
-                <button>Sign Up</button>
+                <button onClick={submit}>Sign Up</button>
 
                 <label
                   className="login-instead"
