@@ -6,7 +6,7 @@ body.active-modal {
   padding: 10px 20px;
   display: block;
   margin: 100px auto 0;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 .modal,
@@ -45,4 +45,132 @@ body.active-modal {
   top: 10px;
   right: 10px;
   padding: 5px 7px;
+}
+
+
+/* extra css */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Jost", sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.login2-main {
+  width: 350px;
+  height: 80vh;
+  background: red;
+  overflow: hidden;
+  background: url("1.png") no-repeat center/cover;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+}
+
+#login2-chk {
+  display: none;
+}
+
+.login2-signup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.login2-main label {
+  color: #fff;
+  font-size: 2.3em;
+  justify-content: center;
+  display: flex;
+  margin: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.login2-main input {
+  width: 60%;
+  height: 30px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #0f071e;
+}
+
+.login2-main button {
+  width: 60%;
+  height: 30px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.login2-main .login2-signup button:hover {
+  background: #6d44b8;
+}
+
+.login2-login {
+  height: 460px;
+  background-color: #eee;
+  border-radius: 60% / 10%;
+  transform: translateY(-180px);
+  transition: 0.8s ease-in-out;
+}
+
+.login2-login label {
+  color: #573b8a;
+  transform: scale(0.6);
+  padding-top: 20px;
+}
+
+#login2-chk:checked~.login2-signup label {
+  transform: scale(0.6);
+}
+
+#login2-chk:checked~.login2-login {
+  transform: translateY(-500px);
+}
+
+#login2-chk:checked~.login2-login label {
+  transform: scale(1);
+}
+
+
+.login-instead {
+  color: #0f071e !important;
+  text-align: center;
+  font-size: 0.7em !important;
+  margin: 20px !important;
+  cursor: pointer;
+  padding: 0px !important;
+}
+
+.modal-closer {
+  display: block;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.modal-closer p {
+  display: block;
 }

@@ -8,7 +8,6 @@ import Team from "./components/Team/Team";
 import Home from "./components/LandingPage/Home";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/LoginSignup/Login";
-import Login2 from "./components/LoginSignup/Login2";
 import UserProfile from "./components/UserProfile/UserProfile"; // Import your UserProfile component
 // import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -52,7 +51,6 @@ function App() {
           />
 
           <Route exact path="/profile" element={<UserProfile />} />
-          <Route path="/login2" element={<Login2 />}></Route>
         </Routes>
         {modal && (
           <Login
