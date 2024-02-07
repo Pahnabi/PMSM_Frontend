@@ -201,6 +201,7 @@ body {
 .signup-contents {
   height: 55vh;
   overflow: scroll;
+  overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: #220634 #f1f1f1;
 }
