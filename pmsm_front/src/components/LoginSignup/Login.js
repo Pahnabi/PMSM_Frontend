@@ -132,7 +132,7 @@ const Login = (props) => {
                   setPassword(e.target.value);
                 }}
               />
-              <button onClick={submitLogin}>Login</button>
+              <button className="fill" onClick={submitLogin}>Login</button>
             </form>
           </div>
 
