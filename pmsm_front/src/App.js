@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar1 from "./components/Navbar/Navbar1";
@@ -16,6 +16,10 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [modal, setModal] = useState(false);
   const [loginstatus, setLoginstatus] = useState(false);
+
+  useEffect(() => {
+    setLoginstatus(false);
+  }, []);
 
   const toggleModal = () => {
     setModal(!modal);
