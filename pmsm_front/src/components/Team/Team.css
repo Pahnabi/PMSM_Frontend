@@ -44,3 +44,20 @@
   font-weight: 900;
   color: #561c24;
 }
+
+/* .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin: 20px;
+} */
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding-block: 1rem;
+  text-align: center;
+  gap: 20px;
+  justify-content: center;
+}

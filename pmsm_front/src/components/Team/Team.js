@@ -6,11 +6,14 @@ import TeamCard from "./TeamCard";
 function Team() {
   return (
     <div className="team-page flex items-start justify-center h-screen">
-      <TeamCard />
       <h1 className="team-heading text-6xl font-extrabold font-mono text-center">
         Our Team
       </h1>
-      {/* <div className="team-content">
+      <div className="team-grid">
+        <TeamCard />
+      </div>
+      {/* Old Team Card made by Dikshant 
+      <div className="team-content">
         <CustomCard
           imageSrc="https://placekitten.com/300/200" // Replace with your image URL
           title="Haraprasad Badajena"
@@ -42,6 +45,7 @@ function Team() {
           description="IM, IIT KGP"
         />
       </div> */}
+      {/* Old Team Card made by Sushant
       <div className="main-box grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <div>
           <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
@@ -260,7 +264,7 @@ function Team() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
