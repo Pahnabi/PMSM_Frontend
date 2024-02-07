@@ -29,11 +29,23 @@ app.post("/login", async (req, res) => {
 });
 
 app.post("/signup", async (req, res) => {
-  const { userid, vehicleid, password } = req.body;
+  const {
+    userid,
+    vehicleid,
+    userType,
+    contactNumber,
+    email,
+    address,
+    password,
+  } = req.body;
 
   const data = {
     userid: userid,
     vehicleid: vehicleid,
+    userType: userType,
+    contactNumber: contactNumber,
+    email: email,
+    address: address,
     password: password,
   };
 
@@ -47,6 +59,7 @@ app.post("/signup", async (req, res) => {
       res.json("exist");
     } else {
       res.json("notexist");
+      // console.log(data);
       await collection.insertMany([data]);
     }
   } catch (e) {
