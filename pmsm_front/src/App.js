@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar1 from "./components/Navbar/Navbar1";
@@ -8,12 +8,18 @@ import Team from "./components/Team/Team";
 import Home from "./components/LandingPage/Home";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/LoginSignup/Login";
-import UserProfile from "./components/UserProfile/UserProfile"; // Import your UserProfile component
+import UserProfile from "./components/UserProfile/UserProfile";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [modal, setModal] = useState(false);
   const [loginstatus, setLoginstatus] = useState(false);
+
+  useEffect(() => {
+    setLoginstatus(false);
+  }, []);
 
   const toggleModal = () => {
     setModal(!modal);
@@ -24,10 +30,40 @@ function App() {
     setLoginstatus(!loginstatus);
   };
 
+  // toast
+  const notifysuccess = (c) => {
+    toast.success(c, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      // transition: Bounce,
+    });
+  };
+  const notifyerror = (c) => {
+    toast.error("🦄 Wow so easy!", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      // transition: Bounce,
+    });
+  };
+
   return (
     <Router>
       <>
         <Navbar1 setOpenModal={toggleModal} loginstatus={loginstatus} />
+        <ToastContainer
+        />
         <Routes>
           <Route
             path="/"
@@ -57,6 +93,7 @@ function App() {
             setOpenModal={toggleModal}
             setToggleLogStatus={toggleLoginstatus}
             loginstatus={loginstatus}
+            notifysuccess={notifysuccess}
           />
         )}
       </>

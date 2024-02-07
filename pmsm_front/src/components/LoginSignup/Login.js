@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 import "./Login.css";
 
@@ -9,6 +11,10 @@ const Login = (props) => {
   const navigate = useNavigate();
   const [userid, setUserid] = useState("");
   const [vehicleid, setVehicleid] = useState("");
+  const [userType, setUserType] = useState("Owner");
+  const [contactNumber, setContactNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
   const [password, setPassword] = useState("");
 
   // login sumbit
@@ -25,7 +31,8 @@ const Login = (props) => {
         .then((res) => {
           if (res.data === "exist") {
             // history("/home", { state: { id: email } });
-            alert("Login successful");
+            console.log("Login successful");
+            props.notifysuccess("Login successful");
             navigate("/profile");
             props.setOpenModal();
             props.setToggleLogStatus();
@@ -45,12 +52,15 @@ const Login = (props) => {
   // signup submit
   async function submit(e) {
     e.preventDefault();
-
     try {
       await axios
         .post("http://localhost:8000/signup", {
           userid,
           vehicleid,
+          userType,
+          contactNumber,
+          email,
+          address,
           password,
         })
         .then((res) => {
@@ -58,7 +68,11 @@ const Login = (props) => {
             alert("User already exists");
           } else if (res.data === "notexist") {
             // history("/home", { state: { id: email } });
-            alert("Signup Successful");
+            console.log("Signup Successful");
+            props.notifysuccess("Signup successful");
+            navigate("/profile");
+            props.setOpenModal();
+            props.setToggleLogStatus();
           }
         })
         .catch((e) => {
@@ -132,7 +146,9 @@ const Login = (props) => {
                   setPassword(e.target.value);
                 }}
               />
-              <button className="fill" onClick={submitLogin}>Login</button>
+              <button className="fill" onClick={submitLogin}>
+                Login
+              </button>
             </form>
           </div>
 
@@ -169,13 +185,11 @@ const Login = (props) => {
                     setVehicleid(e.target.value);
                   }}
                 />
-                <input
-                  type="text"
-                  name="txt"
-                  placeholder="User Name"
-                  required=""
-                />
-                <select className="user-type" name="dropdown">
+                <select
+                  className="user-type"
+                  name="dropdown"
+                  onChange={(e) => setUserType(e.target.value)}
+                >
                   <option
                     className="user-type-initial-option"
                     value=""
@@ -184,8 +198,8 @@ const Login = (props) => {
                   >
                     Select User Type
                   </option>
-                  <option value="option1">Owner</option>
-                  <option value="option2">Manufacturer</option>
+                  <option value="Owner">Owner</option>
+                  <option value="Manufacturer">Manufacturer</option>
                 </select>
 
                 <input
@@ -193,27 +207,28 @@ const Login = (props) => {
                   name="contactNumber"
                   placeholder="Contact Number"
                   required=""
+                  onChange={(e) => setContactNumber(e.target.value)}
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Email ID"
                   required=""
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
                   type="text"
                   name="tet"
                   placeholder="Address"
                   required=""
+                  onChange={(e) => setAddress(e.target.value)}
                 />
                 <input
                   type="Password"
                   name="pswd"
                   placeholder="Password"
                   required=""
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <input
                   type="Password"

@@ -1,9 +1,10 @@
-// Navbar1.js
 import React, { useState, useEffect } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./Navbar1.css";
+import { useNavigate } from "react-router-dom";
 
 function Navbar1(props) {
+  const navigate = useNavigate();
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
@@ -76,7 +77,7 @@ function Navbar1(props) {
           <li>
             <button
               onClick={() => {
-                props.setOpenModal();
+                navigate("/");
               }}
             >
               Logout
