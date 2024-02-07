@@ -108,10 +108,10 @@ body {
 }
 
 .login2-main button {
-  width: 55%;
+  width: 60%;
   height: 30px;
   margin-inline: auto;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 30px;
   justify-content: center;
   display: block;
@@ -128,7 +128,10 @@ body {
 }
 
 .login2-main .login2-signup button:hover {
-  background: #6d44b8;
+  background: rgb(56, 35, 96);
+}
+.login2-main button:hover {
+  background: rgb(56, 35, 96);
 }
 
 .login2-login {
@@ -146,31 +149,31 @@ body {
   margin-bottom: 10px;
 }
 
-#login2-chk:checked ~ .login2-signup .login-heading {
+#login2-chk:checked~.login2-signup .login-heading {
   transform: scale(0.8);
 }
 
-#login2-chk:checked ~ .login2-signup input,
-#login2-chk:checked ~ .login2-signup button {
+#login2-chk:checked~.login2-signup input,
+#login2-chk:checked~.login2-signup button {
   transform: translateY(500px);
-  transition: 0.8s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
-#login2-chk ~ .login2-signup input,
-#login2-chk ~ .login2-signup button {
+#login2-chk~.login2-signup input,
+#login2-chk~.login2-signup button {
   transform: translateY(0);
-  transition: 0.8s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-#login2-chk:checked ~ .login2-signup .sign-up-heading {
+#login2-chk:checked~.login2-signup .sign-up-heading {
   transform: scale(0.6);
 }
 
-#login2-chk:checked ~ .login2-login {
+#login2-chk:checked~.login2-login {
   transform: translateY(-500px);
 }
 
-#login2-chk:checked ~ .login2-login label {
+#login2-chk:checked~.login2-login label {
   transform: scale(1);
 }
 
@@ -198,6 +201,7 @@ body {
 .signup-contents {
   height: 55vh;
   overflow: scroll;
+  overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: #220634 #f1f1f1;
 }
@@ -215,6 +219,10 @@ body {
   border-radius: 5px;
   color: #0f071e;
 }
+
 .user-type .user-type-initial-option {
   color: gray;
 }
+
+
+
