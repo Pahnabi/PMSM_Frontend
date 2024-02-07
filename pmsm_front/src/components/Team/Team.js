@@ -1,10 +1,12 @@
 import React from "react";
 import "./Team.css";
 import CustomCard from "./CustomCard";
+import TeamCard from "./TeamCard";
 
 function Team() {
   return (
     <div className="team-page flex items-start justify-center h-screen">
+      <TeamCard />
       <h1 className="team-heading text-6xl font-extrabold font-mono text-center">
         Our Team
       </h1>
