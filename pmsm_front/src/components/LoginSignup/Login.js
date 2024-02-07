@@ -2,11 +2,12 @@ import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 import "./Login.css";
 
 const Login = (props) => {
-
   const navigate = useNavigate();
   const [userid, setUserid] = useState("");
   const [vehicleid, setVehicleid] = useState("");
@@ -31,6 +32,7 @@ const Login = (props) => {
           if (res.data === "exist") {
             // history("/home", { state: { id: email } });
             console.log("Login successful");
+            props.notifysuccess("Login successful");
             navigate("/profile");
             props.setOpenModal();
             props.setToggleLogStatus();
@@ -67,6 +69,7 @@ const Login = (props) => {
           } else if (res.data === "notexist") {
             // history("/home", { state: { id: email } });
             console.log("Signup Successful");
+            props.notifysuccess("Signup successful");
             navigate("/profile");
             props.setOpenModal();
             props.setToggleLogStatus();
