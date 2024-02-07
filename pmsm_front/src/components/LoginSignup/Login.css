@@ -47,7 +47,6 @@ body.active-modal {
   padding: 5px 7px;
 }
 
-
 /* extra css */
 body {
   margin: 0;
@@ -94,11 +93,13 @@ body {
 
 .login2-main input {
   width: 60%;
-  height: 30px;
+  height: 35px;
   background: #e0dede;
   justify-content: center;
   display: flex;
-  margin: 20px auto;
+  /* margin: 20px auto; */
+  margin-inline: auto;
+  margin-block: 10px;
   padding: 10px;
   border: none;
   outline: none;
@@ -107,9 +108,11 @@ body {
 }
 
 .login2-main button {
-  width: 60%;
+  width: 55%;
   height: 30px;
-  margin: 10px auto;
+  margin-inline: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
   justify-content: center;
   display: block;
   color: #fff;
@@ -118,7 +121,7 @@ body {
   font-weight: bold;
   border: none;
   outline: none;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   border-radius: 5px;
   cursor: pointer;
   transition: 0.2s ease-in;
@@ -143,18 +146,33 @@ body {
   margin-bottom: 10px;
 }
 
-#login2-chk:checked~.login2-signup .sign-up-heading {
+#login2-chk:checked ~ .login2-signup .login-heading {
+  transform: scale(0.8);
+}
+
+#login2-chk:checked ~ .login2-signup input,
+#login2-chk:checked ~ .login2-signup button {
+  transform: translateY(500px);
+  transition: 0.8s ease-in-out;
+}
+
+#login2-chk ~ .login2-signup input,
+#login2-chk ~ .login2-signup button {
+  transform: translateY(0);
+  transition: 0.8s ease-in-out;
+}
+
+#login2-chk:checked ~ .login2-signup .sign-up-heading {
   transform: scale(0.6);
 }
 
-#login2-chk:checked~.login2-login {
+#login2-chk:checked ~ .login2-login {
   transform: translateY(-500px);
 }
 
-#login2-chk:checked~.login2-login label {
+#login2-chk:checked ~ .login2-login label {
   transform: scale(1);
 }
-
 
 .login-instead {
   color: #0f071e !important;
@@ -184,19 +202,19 @@ body {
   scrollbar-color: #220634 #f1f1f1;
 }
 
-.user-type{
+.user-type {
   width: 60%;
-  height: 30px;
+  height: 35px;
   background: #e0dede;
   justify-content: center;
   display: flex;
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 0px 10px;
   border: none;
   outline: none;
   border-radius: 5px;
   color: #0f071e;
 }
-.user-type .user-type-initial-option{
+.user-type .user-type-initial-option {
   color: gray;
 }

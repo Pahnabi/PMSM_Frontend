@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
-
 import "./Login.css";
 
 const Login = (props) => {
@@ -43,7 +42,7 @@ const Login = (props) => {
     }
   }
 
-  // signup submit 
+  // signup submit
   async function submit(e) {
     e.preventDefault();
 
@@ -99,7 +98,11 @@ const Login = (props) => {
             {/* login */}
             {/* login */}
             <form action="POST">
-              <label htmlFor="login2-chk" aria-hidden="true">
+              <label
+                className="login-heading"
+                htmlFor="login2-chk"
+                aria-hidden="true"
+              >
                 Login
               </label>
               <input

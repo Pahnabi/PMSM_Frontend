@@ -1,30 +1,46 @@
 .team-page {
-    background-image: linear-gradient(to right top, #ddbe9b, #e3c9a8, #e9d4b5, #efdfc2, #f6ead0, #f5e6ca, #f4e2c3, #f3debd, #eccaa3, #e7b58b, #e2a076, #dd8965);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    padding-top:  20px;
-    padding-bottom: 30px;
+  background-image: linear-gradient(
+    to right top,
+    #ddbe9b,
+    #e3c9a8,
+    #e9d4b5,
+    #efdfc2,
+    #f6ead0,
+    #f5e6ca,
+    #f4e2c3,
+    #f3debd,
+    #eccaa3,
+    #e7b58b,
+    #e2a076,
+    #dd8965
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
-.team-content
-{
-    display: flex;
-    /* background-color: white; */
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 5px;
+.main-box {
+  padding-inline: 6rem;
+}
+.team-content {
+  display: flex;
+  /* background-color: white; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5px;
 }
 
 .team-heading {
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
-    margin: 5vh;
-    margin-bottom: 8vh;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: #561C24;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin: 5vh;
+  margin-bottom: 8vh;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #561c24;
 }
