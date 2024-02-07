@@ -3,6 +3,7 @@
 .services-page {
     background-image: linear-gradient(to right bottom, #ddbe9b, #e3c9a8, #e9d4b5, #efdfc2, #f6ead0, #f5e6ca, #f4e2c3, #f3debd, #eccaa3, #e7b58b, #e2a076, #dd8965);
     /* font-family: 'Oswald', sans-serif; */
+    overflow: hidden;
 }
 
 .services-heading {
@@ -62,5 +63,5 @@
 {
 background-image: linear-gradient(to right top, #ffe382, #fde78f, #fbec9d, #faefaa, #f9f3b7, #f7f5bb, #f6f7bf, #f4f9c3, #effabf, #eafcbc, #e3fdb9, #dcffb7);box-shadow: 0px 0px 20px rgb(161, 161, 161);
 cursor: pointer;
-transform: scale(1.05);
+transform: scale(1.05) !important;
 }
