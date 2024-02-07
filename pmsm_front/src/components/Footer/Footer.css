@@ -1,15 +1,52 @@
 .footer {
   background-color: #dfbe9e;
   color: rgb(0, 0, 0);
-  font-family: "DM Serif Display", serif;
+  font-family: "mono", sans-serif;
+  font-size: 0.9em;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 5vh 5vh;
 }
 
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 5vw; */
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-left form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left form input,
+.footer-left form textarea {
+  width: 70%;
+  padding: 1vh 1vw;
+  margin: 1vh 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.footer-form-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2vw;
+}
 .footer-top-logo {
   display: flex;
   flex-direction: row;
@@ -27,4 +64,30 @@
 .copyright {
   font-size: 0.9em;
   font-weight: 700;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+  .footer-left form input,
+  .footer-left form textarea {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer-left {
+    width: 85%;
+    margin-bottom: 20px;
+  }
+  .footer-left form input,
+  .footer-left form textarea {
+    width: 100%;
+  }
+
+  .footer-top-logo img {
+    width: 80%;
+    height: 80%;
+  }
 }
