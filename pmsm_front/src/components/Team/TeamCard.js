@@ -18,8 +18,8 @@ function TeamCard() {
             }}
           ></div>
           <div className="team-card2-title-total">
-            <div className="team-card2-title">Ant Collector</div>
-            <h2>Morgan Sweeney</h2>
+            <div className="team-card2-title">EE, IIT Kharagpur</div>
+            <h2>Haraprasad Badajena</h2>
 
             <div className="team-card2-desc">
               Morgan has collected ants since they were six years old and now
@@ -27,13 +27,13 @@ function TeamCard() {
             </div>
             <div className="team-card2-icons">
               <button>
-                <i className="far fa-heart"></i>
+                <i className="fa-brands fa-github"></i>
               </button>
               <button>
                 <i className="far fa-envelope"></i>
               </button>
               <button>
-                <i className="fas fa-user-friends"></i>
+                <i className="fa-brands fa-linkedin-in"></i>
               </button>
             </div>
           </div>
