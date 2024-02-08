@@ -29,15 +29,17 @@ const Login = (props) => {
           password,
         })
         .then((res) => {
-          if (res.data === "exist") {
+          if (res.data.message === "exist") {
             // history("/home", { state: { id: email } });
             console.log("Login successful");
             props.notifysuccess("Login successful");
             navigate("/profile");
             props.setOpenModal();
             props.setToggleLogStatus();
-          } else if (res.data === "notexist") {
-            alert("User have not sign up");
+          } else if (res.data.message === "notexist") {
+            props.notifyerror("User doesn't exist");
+          } else if (res.data.message === "incorrectpassword") {
+            props.notifyerror("Incorrect Password");
           }
         })
         .catch((e) => {
@@ -64,9 +66,9 @@ const Login = (props) => {
           password,
         })
         .then((res) => {
-          if (res.data === "exist") {
+          if (res.data.message === "exist") {
             alert("User already exists");
-          } else if (res.data === "notexist") {
+          } else if (res.data.message === "notexist") {
             // history("/home", { state: { id: email } });
             console.log("Signup Successful");
             props.notifysuccess("Signup successful");

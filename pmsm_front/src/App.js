@@ -45,7 +45,7 @@ function App() {
     });
   };
   const notifyerror = (c) => {
-    toast.error("🦄 Wow so easy!", {
+    toast.error(c, {
       position: "top-center",
       autoClose: 2000,
       hideProgressBar: false,
@@ -62,8 +62,7 @@ function App() {
     <Router>
       <>
         <Navbar1 setOpenModal={toggleModal} loginstatus={loginstatus} />
-        <ToastContainer
-        />
+        <ToastContainer />
         <Routes>
           <Route
             path="/"
@@ -94,6 +93,7 @@ function App() {
             setToggleLogStatus={toggleLoginstatus}
             loginstatus={loginstatus}
             notifysuccess={notifysuccess}
+            notifyerror={notifyerror}
           />
         )}
       </>

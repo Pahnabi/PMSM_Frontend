@@ -6,6 +6,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+
+const secretKey = "mykeyiseproject";
 
 app.get("/", cors(), (req, res) => {});
 
@@ -17,17 +20,25 @@ app.post("/login", async (req, res) => {
       userid: userid,
       vehicleid: vehicleid,
     });
-
     if (!user) {
-      return res.json("notexist");
+      const message = "notexist";
+      return res.json({ message });
     }
 
     const match = await bcrypt.compare(password, user.password);
 
     if (match) {
-      return res.json("exist");
+      const message = "exist";
+      const data = {
+        user : {
+          id:user.id
+        }
+      }
+      const authToken = jwt.sign(data, secretKey, { expiresIn: "1h" });
+      return res.json({ message, authToken });
     } else {
-      return res.json("notexist");
+      const message = "incorrectpassword";
+      return res.json({ message});
     }
   } catch (e) {
     res.json("fail");
@@ -65,13 +76,17 @@ app.post("/signup", async (req, res) => {
     });
 
     if (check) {
-      res.json("exist");
+      const message = "exist";
+      res.json({ message });
     } else {
-      res.json("notexist");
       await collection.insertMany([data]);
+      const authToken = jwt.sign(data, secretKey, { expiresIn: "1h" });
+      const message = "notexist";
+      res.json({ message, authToken });
     }
   } catch (e) {
-    res.json("fail");
+    // res.json("fail");
+    res.json(e);
   }
 });
 
