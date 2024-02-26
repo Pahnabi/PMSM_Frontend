@@ -70,14 +70,14 @@
 /* If the battery level is less than 100%, you can change the color to green */
 /* If the battery level is 100%, you can change the color to blue */
 
-.box2 .evhealth-percent svg {
+.evhealth-percent svg {
   position: relative;
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-25%, 3.5%);
+  transform: translate(-25%, 3.5%); */
 }
 
-.box2 .evhealth-percent svg circle {
+.evhealth-percent svg circle {
   fill: none;
   stroke-width: 10;
   stroke: #000;
@@ -87,19 +87,20 @@
   stroke-linecap: round;
 }
 
-.box2 .evhealth-percent svg circle:nth-child(1) {
+.evhealth-percent svg circle:nth-child(1) {
   stroke: #f3f3f3;
   stroke-dashoffset: 0;
   /* animation: animate 1s linear forwards; */
 }
 
-.box2 .evhealth-percent svg circle:nth-child(2) {
+.evhealth-percent svg circle:nth-child(2) {
   stroke: #8bc34a;
   stroke-dashoffset: calc(440 - (440 * 69) / 100);
   animation: animate 1s linear forwards;
 }
 
-.box2 .evhealth-percent .evhealth-number {
+.evhealth-percent .evhealth-number {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -111,10 +112,11 @@
   color: #999;
 }
 
-.box2 .evhealth-percent .evhealth-number h2 {
+.evhealth-percent .evhealth-number h2 {
   font-size: 2.5rem;
 }
-.box2 .evhealth-percent .evhealth-number h2 span {
+
+.evhealth-percent .evhealth-number h2 span {
   font-size: 2.5rem;
   color: #999;
 }
