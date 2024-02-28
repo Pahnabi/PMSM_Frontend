@@ -42,14 +42,20 @@ def add_current_data_periodically():
         while True:
             # Generate dummy data with current timestamp
             current_data = {
-                'current': random.randint(0, 10),
+                'current': random.randint(0, 1000),
                 'timestamp': datetime.utcnow()  # Current timestamp
             }
             # Add dummy data to the database
             new_current_data = CurrentData(**current_data)
             db.session.add(new_current_data)
             db.session.commit()
-            time.sleep(25)  
+            time.sleep(5)  
+
+@app.route('/current-data', methods=['GET'])
+def get_current_data():
+    current_data = CurrentData.query.order_by(CurrentData.id.desc()).limit(5).all()
+    data = [{'current': data.current, 'timestamp': data.timestamp} for data in current_data]
+    return jsonify(data)
 
 @app.route("/login", methods=['POST'])
 def login():

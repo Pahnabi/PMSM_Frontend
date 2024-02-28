@@ -9,6 +9,7 @@ import Home from "./components/LandingPage/Home";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/LoginSignup/Login";
 import UserProfile from "./components/UserProfile/UserProfile";
+import Current from "./components/Current/Current";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -86,6 +87,7 @@ function App() {
           />
 
           <Route exact path="/profile" element={<UserProfile />} />
+          <Route exact path="/current" element={<Current />} />
         </Routes>
         {modal && (
           <Login
