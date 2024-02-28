@@ -23,7 +23,7 @@ const Login = (props) => {
 
     try {
       await axios
-        .post("http://localhost:8000/login", {
+        .post("http://localhost:5000/login", {
           userid,
           vehicleid,
           password,
@@ -33,18 +33,30 @@ const Login = (props) => {
             // history("/home", { state: { id: email } });
             console.log("Login successful");
             props.notifysuccess("Login successful");
-            navigate("/profile");
-            props.setOpenModal();
-            props.setToggleLogStatus();
-          } else if (res.data.message === "notexist") {
-            props.notifyerror("User doesn't exist");
-          } else if (res.data.message === "incorrectpassword") {
-            props.notifyerror("Incorrect Password");
+            // navigate("/profile");
+            // props.setOpenModal();
+            // props.setToggleLogStatus();
+          }
+          if (res.data.message === "User does not exist.") {
+            props.notifyerror("User does not exist");
+          }
+          // else if (res.data.message === "Incorrect password.") {
+          //   props.notifyerror("Incorrect Password");
+          // }
+          else {
+            console.log(res.data.message);
+            alert(1);
           }
         })
         .catch((e) => {
-          alert("wrong details");
-          console.log(e);
+          if (e.response.data.message === "Incorrect password.") {
+            props.notifyerror("Incorrect Password");
+          } else if (e.response.data.message === "User does not exist.") {
+            props.notifyerror("User does not exist");
+          } else {
+            console.error("Error during login:", e);
+            alert("Something went wrong during login.");
+          }
         });
     } catch (e) {
       console.log(e);
@@ -56,7 +68,7 @@ const Login = (props) => {
     e.preventDefault();
     try {
       await axios
-        .post("http://localhost:8000/signup", {
+        .post("http://localhost:5000/signup", {
           userid,
           vehicleid,
           userType,
@@ -68,13 +80,16 @@ const Login = (props) => {
         .then((res) => {
           if (res.data.message === "exist") {
             alert("User already exists");
-          } else if (res.data.message === "notexist") {
+          } else if (res.data.message === "User created successfully.") {
             // history("/home", { state: { id: email } });
             console.log("Signup Successful");
             props.notifysuccess("Signup successful");
             navigate("/profile");
             props.setOpenModal();
             props.setToggleLogStatus();
+          } else {
+            console.log(res);
+            alert(1);
           }
         })
         .catch((e) => {
