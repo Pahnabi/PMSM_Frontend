@@ -1,6 +1,6 @@
 .footer {
   /* background-color: #dfbe9e; */
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right bottom,
     #561c24,
     #622a28,
@@ -14,7 +14,8 @@
     #7b4134,
     #753532,
     #6d2932
-  );
+  ); */
+  background-image: linear-gradient(to right bottom, #180c1a, #140812, #0a0307, #050203, #000000);
   color: rgb(0, 0, 0);
   font-family: "mono", sans-serif;
   font-size: 0.9em;

@@ -14,6 +14,7 @@
     #e2a076,
     #dd8965
   );
+  background-image: linear-gradient(to right top, #001536, #28153c, #29123f, #0b183e, #00124e);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +43,7 @@
   margin-bottom: 8vh;
   font-size: 2.5rem;
   font-weight: 900;
-  color: #561c24;
+  color: #ffdfdf;
 }
 
 /* .team-grid {

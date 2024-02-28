@@ -41,6 +41,7 @@ function Services() {
       <div className="row">
         <div className="col1">
           <img
+            className="services-side-image"
             src="/Media/services-image.webp"
             alt="Description of the image"
           />

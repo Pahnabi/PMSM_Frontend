@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 .services-page {
-    background-image: linear-gradient(to right bottom, #ddbe9b, #e3c9a8, #e9d4b5, #efdfc2, #f6ead0, #f5e6ca, #f4e2c3, #f3debd, #eccaa3, #e7b58b, #e2a076, #dd8965);
+    /* background-image: linear-gradient(to right bottom, #ddbe9b, #e3c9a8, #e9d4b5, #efdfc2, #f6ead0, #f5e6ca, #f4e2c3, #f3debd, #eccaa3, #e7b58b, #e2a076, #dd8965); */
+    background-image: linear-gradient(to right bottom, #001536, #28153c, #29123f, #0b183e, #00124e);
     /* font-family: 'Oswald', sans-serif; */
     overflow: hidden;
 }
@@ -13,10 +14,14 @@
     margin-bottom: 8vh;
     font-size: 2.5rem;
     font-weight: 900;
-    color: #561C24;
-
+    color: #ffdfdf;
+    
 }
 
+.services-side-image
+{
+    /* box-shadow: 0px 0px 50px rgb(0, 0, 0); */
+}
 .service-content-heading {
     display: flex;
     /* justify-content: center; */
@@ -58,6 +63,7 @@
     /* font-size: 0.5rem; */
     /* background-color: red; */
     transition: 1s ease;
+    box-shadow: 0px 0px 50px rgb(0, 0, 0);
 }
 .service-card:hover
 {
