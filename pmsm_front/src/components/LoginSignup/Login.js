@@ -37,9 +37,9 @@ const Login = (props) => {
             // props.setOpenModal();
             // props.setToggleLogStatus();
           }
-          if (res.data.message === "User does not exist.") {
-            props.notifyerror("User does not exist");
-          }
+          // if (res.data.message === "User does not exist.") {
+          //   props.notifyerror("User does not exist");
+          // }
           // else if (res.data.message === "Incorrect password.") {
           //   props.notifyerror("Incorrect Password");
           // }
