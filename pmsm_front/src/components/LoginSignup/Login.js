@@ -33,9 +33,9 @@ const Login = (props) => {
             // history("/home", { state: { id: email } });
             console.log("Login successful");
             props.notifysuccess("Login successful");
-            // navigate("/profile");
-            // props.setOpenModal();
-            // props.setToggleLogStatus();
+            navigate("/profile");
+            props.setOpenModal();
+            props.setToggleLogStatus();
           }
           // if (res.data.message === "User does not exist.") {
           //   props.notifyerror("User does not exist");
