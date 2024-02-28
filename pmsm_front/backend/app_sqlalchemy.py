@@ -4,6 +4,11 @@ from flask_bcrypt import Bcrypt
 from flask_login import UserMixin
 from flask_cors import CORS 
 import jwt
+import threading
+import time
+import random
+import schedule
+from datetime import datetime
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:123456789@localhost/pmsm_motor_db'
@@ -24,6 +29,27 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(255))
     address = db.Column(db.String(255))
     password = db.Column(db.String(255))
+
+
+class CurrentData(db.Model):
+    __tablename__ = 'current_data'
+    id = db.Column(db.Integer, primary_key=True)
+    current = db.Column(db.Integer)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+
+def add_current_data_periodically():
+    with app.app_context():
+        while True:
+            # Generate dummy data with current timestamp
+            current_data = {
+                'current': random.randint(0, 10),
+                'timestamp': datetime.utcnow()  # Current timestamp
+            }
+            # Add dummy data to the database
+            new_current_data = CurrentData(**current_data)
+            db.session.add(new_current_data)
+            db.session.commit()
+            time.sleep(25)  
 
 @app.route("/login", methods=['POST'])
 def login():
@@ -71,4 +97,7 @@ def signup():
     return jsonify({'message': 'User created successfully.', 'authToken': auth_token}), 201
 
 if __name__ == "__main__":
+    # Start a separate thread to add current data periodically
+    threading.Thread(target=add_current_data_periodically).start()
+    # Run Flask app
     app.run(debug=True)
