@@ -5,15 +5,16 @@ function Client() {
     return (
         <div className="about-page">
         <h1 className="about-heading">
-          Transforming the distributed equipment industries with IoT and AI
+          Our Market Segments
         </h1>
         <p className="about-content">
-          Revolutionize your Electric Vehicle monitoring service with IoT and
-          AI, delivering real-time insights for optimized performance and
-          enhanced user experience. Leverage advanced technology to bridge
-          communication gaps, empower your workforce, and ensure transparency in
-          your EV operations.
+        <ul className="list-disc pl-6 mb-6">
+          <li className="text-3xl">Battery Vendors</li>
+          <li className="text-3xl">EV manufacturers</li>
+          <li className="text-3xl">Energy companies</li>
+        </ul>
         </p>
+        
         <div className="image-about"></div>
       </div>
     );

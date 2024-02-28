@@ -3,99 +3,60 @@
 /* Add these styles to your existing CSS file */
 /* Add your existing styles here */
 
-.menu-icon {
-  cursor: pointer;
-}
+.navbar1 {
 
-.menu-icon svg {
-  font-size: 24px;
-}
-
-.mobile-menu-modal {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: #0f071e;
-  z-index: 1;
+  z-index: 2;
+  transition: background-color 0.3s ease;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-}
-
-.close-modal-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-
-.close-modal-icon svg {
-  font-size: 32px;
+  padding: 10px;
   color: white;
+  /* font-size: 20px; */
 }
 
-/* Add media queries for responsiveness */
-@media only screen and (max-width: 768px) {
-  .navbar1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
+.transparent {
+  background-color: transparent;
+}
 
-  .left-section {
-    display: flex;
-    align-items: center;
-  }
+.solid {
+  background-color: #0f071e;
+}
 
-  .logo {
-    max-width: 50px;
-    margin-right: 10px;
-  }
+.left-section {
+  display: flex;
+  align-items: center;
+}
 
-  .navbar-content-heading {
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
 
-  .right-section {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    z-index: 1000;
-  }
+.right-section ul {
+  list-style: none;
+  display: flex;
+}
 
-  .right-section.open {
-    display: flex;
-  }
+.right-section li {
+  margin-right: 15px;
+}
 
-  .right-section ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-  }
+.right-section a,
+.right-section button {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 
-  .right-section li {
-    padding: 15px 0;
-  }
-
-  .menu-icon {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-  }
-
-  .menu-icon span {
-    height: 3px;
-    width: 25px;
-    background-color: #000;
-    margin: 5px 0;
-  }
+.right-section a:hover,
+.right-section button:hover {
+  color: #ffd700;
+  /* Change the color on hover */
 }
