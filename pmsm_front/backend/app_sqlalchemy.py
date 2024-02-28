@@ -49,7 +49,7 @@ def add_current_data_periodically():
             new_current_data = CurrentData(**current_data)
             db.session.add(new_current_data)
             db.session.commit()
-            time.sleep(5)  
+            time.sleep(4)  
 
 @app.route('/current-data', methods=['GET'])
 def get_current_data():

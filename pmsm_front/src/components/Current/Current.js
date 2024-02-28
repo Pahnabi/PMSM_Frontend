@@ -38,7 +38,7 @@ function Current() {
     fetchData();
 
     // Set up interval to fetch data every 10 seconds
-    const intervalId = setInterval(fetchData, 10000); // 10 seconds
+    const intervalId = setInterval(fetchData, 5000); // 10 seconds
 
     // Clean up function to clear interval when component unmounts
     return () => clearInterval(intervalId);
