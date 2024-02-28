@@ -78,9 +78,10 @@ const Login = (props) => {
           password,
         })
         .then((res) => {
-          if (res.data.message === "exist") {
-            alert("User already exists");
-          } else if (res.data.message === "User created successfully.") {
+          // if (res.data.message === "exist") {
+          //   alert("User already exists");
+          // } 
+           if (res.data.message === "User created successfully.") {
             // history("/home", { state: { id: email } });
             console.log("Signup Successful");
             props.notifysuccess("Signup successful");
@@ -93,8 +94,17 @@ const Login = (props) => {
           }
         })
         .catch((e) => {
-          alert("wrong details");
-          console.log(e);
+          if (
+            e.response.data.message ===
+            "User already exists with this userid or vehicleid."
+          ) {
+            props.notifyerror(
+              "User already exists with this User Name or Vehicle Id."
+            );
+          } else {
+            props.notifyerror("wrong details");
+            console.log(e);
+          }
         });
     } catch (e) {
       console.log(e);
