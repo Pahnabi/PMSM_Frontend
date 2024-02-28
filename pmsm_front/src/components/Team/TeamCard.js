@@ -1,10 +1,19 @@
 import React from "react";
 import "./TeamCard.css";
 
+// import AOS from "aos";
+import "aos/dist/aos.css";
+
 function TeamCard() {
   return (
     <>
-      <div className="team-card2">
+      <div
+        className="team-card2"
+        data-aos="slide-up"
+        data-aos-duration="400"
+        data-aos-delay="0"
+        data-aos-offset="0"
+      >
         <div className="team-card2-img-avatar">
           <img src="https://placekitten.com/300/300" alt="" />
         </div>
@@ -39,7 +48,13 @@ function TeamCard() {
           </div>
         </div>
       </div>
-      <div className="team-card2">
+      <div
+        className="team-card2"
+        data-aos="slide-up"
+        data-aos-duration="400"
+        data-aos-delay="100"
+        data-aos-offset="0"
+      >
         <div className="team-card2-img-avatar">
           <img src="https://placekitten.com/300/300" alt="" />
         </div>
@@ -74,7 +89,13 @@ function TeamCard() {
           </div>
         </div>
       </div>
-      <div className="team-card2">
+      <div
+        className="team-card2"
+        data-aos="slide-up"
+        data-aos-duration="400"
+        data-aos-delay="200"
+        data-aos-offset="0"
+      >
         <div className="team-card2-img-avatar">
           <img src="https://placekitten.com/300/300" alt="" />
         </div>
@@ -109,7 +130,13 @@ function TeamCard() {
           </div>
         </div>
       </div>
-      <div className="team-card2">
+      <div
+        className="team-card2"
+        data-aos="slide-up"
+        data-aos-duration="400"
+        data-aos-delay="00"
+        data-aos-offset="0"
+      >
         <div className="team-card2-img-avatar">
           <img src="https://placekitten.com/300/300" alt="" />
         </div>
@@ -144,7 +171,13 @@ function TeamCard() {
           </div>
         </div>
       </div>
-      <div className="team-card2">
+      <div
+        className="team-card2"
+        data-aos="slide-up"
+        data-aos-duration="400"
+        data-aos-delay="100"
+        data-aos-offset="0"
+      >
         <div className="team-card2-img-avatar">
           <img src="https://placekitten.com/300/300" alt="" />
         </div>
@@ -179,7 +212,13 @@ function TeamCard() {
           </div>
         </div>
       </div>
-      <div className="team-card2">
+      <div
+        className="team-card2"
+        data-aos="slide-up"
+        data-aos-duration="400"
+        data-aos-delay="200"
+        data-aos-offset="0"
+      >
         <div className="team-card2-img-avatar">
           <img src="https://placekitten.com/300/300" alt="" />
         </div>

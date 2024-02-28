@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 
 import AOS from "aos";
@@ -33,9 +33,8 @@ const servicesData = [
 
 function Services() {
   useEffect(() => {
-      AOS.init({
-      });
-    }, []);
+    AOS.init({});
+  }, []);
   return (
     <div className="services-page">
       <h1 className="services-heading">What do we provide?</h1>
@@ -54,7 +53,9 @@ function Services() {
               data-aos="fade-left"
               data-aos-duration="600"
             >
-              <div className="service-content-heading">
+              <div
+                className="service-content-heading"
+              >
                 <div className="service-icon text-3xl mb-4">{service.icon}</div>
                 <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
               </div>
