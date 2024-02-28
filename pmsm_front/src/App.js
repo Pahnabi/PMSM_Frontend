@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import Team from "./components/Team/Team";
 import Home from "./components/LandingPage/Home";
+import Client from "./components/Client/Client";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/LoginSignup/Login";
 import UserProfile from "./components/UserProfile/UserProfile"; // Import your UserProfile component
@@ -38,6 +39,9 @@ function App() {
                 </div>
                 <div id="about">
                   <About />
+                </div>
+                <div id="Client">
+                  <Client />
                 </div>
                 <div id="services">
                   <Services />
