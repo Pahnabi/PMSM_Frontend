@@ -1,7 +1,6 @@
-/* Navbar1.css */
-
+/* CSS for larger screens */
+/* CSS for larger screens */
 .navbar1 {
-
   position: fixed;
   top: 0px;
   left: 0;
@@ -13,7 +12,6 @@
   align-items: center;
   padding: 10px;
   color: white;
-  /* font-size: 20px; */
 }
 
 .transparent {
@@ -32,6 +30,18 @@
 .logo {
   width: 40px;
   margin-right: 10px;
+}
+
+.menu-toggle {
+  display: none; /* Hide toggle button on larger screens */
+}
+
+.sidebar {
+  display: none; /* Hide sidebar on larger screens */
+}
+
+.right-section {
+  display: flex; /* Display right section for larger screens */
 }
 
 .right-section ul {
@@ -55,5 +65,59 @@
 .right-section a:hover,
 .right-section button:hover {
   color: #ffd700;
-  /* Change the color on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show toggle button on smaller screens */
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+  }
+
+  .navbar1 {
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .right-section {
+    display: none; /* Hide right section on smaller screens */
+  }
+
+  .sidebar{
+    display:none;
+  }
+
+  .sidebar.open {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #0f071e;
+    transition: left 0.3s ease;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    margin: 15px 0;
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .sidebar a:hover {
+    color: #ffd700;
+  }
 }
