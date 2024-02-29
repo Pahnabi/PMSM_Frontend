@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import Login from "./components/LoginSignup/Login";
 import UserProfile from "./components/UserProfile/UserProfile";
 import Current from "./components/Current/Current";
+import Client from "./components/Client/Client";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -77,6 +78,9 @@ function App() {
                 </div>
                 <div id="services">
                   <Services />
+                </div>
+                <div id="client">
+                  <Client />
                 </div>
                 <div id="team">
                   <Team />

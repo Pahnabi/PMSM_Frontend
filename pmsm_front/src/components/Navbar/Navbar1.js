@@ -56,6 +56,11 @@ function Navbar1(props) {
             </Link>
           </li>
           <li>
+            <Link to="client" spy={true} smooth={true} duration={500}>
+              Client
+            </Link>
+          </li>
+          <li>
             <Link to="team" spy={true} smooth={true} duration={500}>
               Team
             </Link>
