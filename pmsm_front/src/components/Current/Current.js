@@ -9,18 +9,20 @@ import {
 } from "react-vis";
 import "react-vis/dist/style.css";
 import "./Current.css";
+import initialData from "./initialData.json";
 
 function Current() {
-  const initialDummyData = [
-    { current: 5, timestamp: "2024-02-28 12:00:00" },
-    { current: 7, timestamp: "2024-02-28 12:10:00" },
-    { current: 3, timestamp: "2024-02-28 12:20:00" },
-    { current: 9, timestamp: "2024-02-28 12:30:00" },
-    { current: 6, timestamp: "2024-02-28 12:40:00" },
-  ];
+  // const initialDummyData = [
+  //   { current: 5, timestamp: "2024-02-28 12:00:00" },
+  //   { current: 7, timestamp: "2024-02-28 12:10:00" },
+  //   { current: 3, timestamp: "2024-02-28 12:20:00" },
+  //   { current: 9, timestamp: "2024-02-28 12:30:00" },
+  //   { current: 6, timestamp: "2024-02-28 12:40:00" },
+  // ];
 
   // State hook to manage top data
-  const [topData, setTopData] = useState(initialDummyData);
+  const [topData, setTopData] = useState([]);
+  // const [topData, setTopData] = useState([]);
 
   useEffect(() => {
     const fetchData = () => {
@@ -61,9 +63,9 @@ function Current() {
             title="Time"
             style={{
               text: {
-                fontSize: "12px",
+                fontSize: "10px",
                 fontWeight: "bold",
-                transform: "rotate(-45deg)",
+                transform: "rotate(-80deg)",
                 textAnchor: "end",
               },
             }}
