@@ -4,6 +4,13 @@ import "./Navbar1.css";
 import { useNavigate } from "react-router-dom";
 
 function Navbar1(props) {
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+
+  useEffect(() => {
+    const loggedInStatus = localStorage.getItem("isLoggedIn");
+    setIsLoggedIn(loggedInStatus === "true");
+  }, []);
+
   const navigate = useNavigate();
   const [scrolling, setScrolling] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -48,7 +55,9 @@ function Navbar1(props) {
     <div className={`navbar1 ${scrolling ? "solid" : "transparent"}`}>
       <div className="left-section">
         <img src="./Media/kgp_logo.png" alt="Logo" className="logo" />
-        <h1 className="navbar-content-heading" onClick={scrollToTop}>AI4ICPS</h1>
+        <h1 className="navbar-content-heading" onClick={scrollToTop}>
+          AI4ICPS
+        </h1>
       </div>
       {isMobile && (
         <div className="menu-toggle" onClick={toggleSidebar}>
@@ -135,7 +144,7 @@ function Navbar1(props) {
                 Team
               </Link>
             </li>
-            {!props.loginstatus && (
+            {!isLoggedIn && (
               <li>
                 <button
                   onClick={() => {
@@ -146,11 +155,13 @@ function Navbar1(props) {
                 </button>
               </li>
             )}
-            {props.loginstatus && (
+            {isLoggedIn && (
               <li>
                 <button
                   onClick={() => {
                     navigate("/");
+                    localStorage.removeItem("authToken");
+                    localStorage.removeItem("isLoggedIn");
                   }}
                 >
                   Logout

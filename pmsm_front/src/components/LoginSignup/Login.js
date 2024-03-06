@@ -11,7 +11,7 @@ const Login = (props) => {
   const navigate = useNavigate();
   const [userid, setUserid] = useState("");
   const [vehicleid, setVehicleid] = useState("");
-  const [userType, setUserType] = useState("Owner");
+  const [userType, setUserType] = useState("");
   const [contactNumber, setContactNumber] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
@@ -20,7 +20,6 @@ const Login = (props) => {
   // login sumbit
   async function submitLogin(e) {
     e.preventDefault();
-
     try {
       await axios
         .post("http://localhost:5000/login", {
@@ -29,37 +28,35 @@ const Login = (props) => {
           password,
         })
         .then((res) => {
-          if (res.data.message === "exist") {
-            // history("/home", { state: { id: email } });
+          console.log(res.status);
+          if (res.status === 200) {
             console.log("Login successful");
             props.notifysuccess("Login successful");
-            navigate("/profile");
+            
+            localStorage.setItem("authToken", res.data.authToken);
+            localStorage.setItem("isLoggedIn", "true");
+
+            // navigate("/profile");
             props.setOpenModal();
-            props.setToggleLogStatus();
-          }
-          // if (res.data.message === "User does not exist.") {
-          //   props.notifyerror("User does not exist");
-          // }
-          // else if (res.data.message === "Incorrect password.") {
-          //   props.notifyerror("Incorrect Password");
-          // }
-          else {
-            console.log(res.data.message);
-            alert(1);
+          } else {
+            console.log(res);
           }
         })
         .catch((e) => {
-          if (e.response.data.message === "Incorrect password.") {
+          if (e.response.status === 401) {
             props.notifyerror("Incorrect Password");
-          } else if (e.response.data.message === "User does not exist.") {
+          } else if (e.response.status === 404) {
             props.notifyerror("User does not exist");
+          } else if (e.response.status === 400) {
+            props.notifyerror("Incomplete details provided.");
           } else {
+            props.notifyerror("Something went wrong during login.");
             console.error("Error during login:", e);
-            alert("Something went wrong during login.");
           }
         });
     } catch (e) {
-      console.log(e);
+      props.notifyerror("Something went wrong during login.");
+      console.error("Error during login:", e);
     }
   }
 
@@ -78,36 +75,32 @@ const Login = (props) => {
           password,
         })
         .then((res) => {
-          // if (res.data.message === "exist") {
-          //   alert("User already exists");
-          // } 
-           if (res.data.message === "User created successfully.") {
-            // history("/home", { state: { id: email } });
-            console.log("Signup Successful");
+          if (res.status === 201) {
             props.notifysuccess("Signup successful");
+            localStorage.setItem("authToken", res.data.authToken);
+            localStorage.setItem("isLoggedIn", "true");
             navigate("/profile");
             props.setOpenModal();
             props.setToggleLogStatus();
           } else {
             console.log(res);
-            alert(1);
           }
         })
         .catch((e) => {
-          if (
-            e.response.data.message ===
-            "User already exists with this userid or vehicleid."
-          ) {
+          if (e.response.status === 409) {
             props.notifyerror(
-              "User already exists with this User Name or Vehicle Id."
+              "User already exists with this User Id or Vehicle Id."
             );
+          } else if (e.response.status === 400) {
+            props.notifyerror("Incomplete details provided.");
           } else {
-            props.notifyerror("wrong details");
-            console.log(e);
+            props.notifyerror("Something went wrong during signup.");
+            console.error("Error during signup:", e);
           }
         });
     } catch (e) {
-      console.log(e);
+      props.notifyerror("Something went wrong during signup.");
+      console.error("Error during signup:", e);
     }
   }
   return (
@@ -133,10 +126,7 @@ const Login = (props) => {
               </p>
             </div>
 
-            {/* login */}
-            {/* login */}
-            {/* login */}
-            {/* login */}
+            
             {/* login */}
             <form action="POST">
               <label
@@ -197,7 +187,7 @@ const Login = (props) => {
                 <input
                   type="text"
                   name="txt"
-                  placeholder="User Name"
+                  placeholder="User Id"
                   required=""
                   onChange={(e) => {
                     setUserid(e.target.value);
