@@ -1,15 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./Navbar1.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Navbar1(props) {
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-
-  useEffect(() => {
-    const loggedInStatus = localStorage.getItem("isLoggedIn");
-    setIsLoggedIn(loggedInStatus === "true");
-  }, []);
+  const location = useLocation();
+  // const location="";
 
   const navigate = useNavigate();
   const [scrolling, setScrolling] = useState(false);
@@ -119,32 +115,37 @@ function Navbar1(props) {
       ) : (
         <div className="right-section">
           <ul>
-            <li>
-              <Link to="home" onClick={scrollToTop}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="about" spy={true} smooth={true} duration={500}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="services" spy={true} smooth={true} duration={500}>
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link to="client" spy={true} smooth={true} duration={500}>
-                Client
-              </Link>
-            </li>
-            <li>
-              <Link to="team" spy={true} smooth={true} duration={500}>
-                Team
-              </Link>
-            </li>
-            {!isLoggedIn && (
+            {(!props.isLoggedIn || location.pathname === "/") && (
+              <>
+                <li>
+                  <Link to="home" onClick={scrollToTop}>
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="about" spy={true} smooth={true} duration={500}>
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link to="services" spy={true} smooth={true} duration={500}>
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link to="client" spy={true} smooth={true} duration={500}>
+                    Client
+                  </Link>
+                </li>
+                <li>
+                  <Link to="team" spy={true} smooth={true} duration={500}>
+                    Team
+                  </Link>
+                </li>
+              </>
+            )}
+
+            {!props.isLoggedIn && (
               <li>
                 <button
                   onClick={() => {
@@ -155,18 +156,45 @@ function Navbar1(props) {
                 </button>
               </li>
             )}
-            {isLoggedIn && (
-              <li>
-                <button
-                  onClick={() => {
-                    navigate("/");
-                    localStorage.removeItem("authToken");
-                    localStorage.removeItem("isLoggedIn");
-                  }}
-                >
-                  Logout
-                </button>
-              </li>
+            {props.isLoggedIn && location.pathname === "/Profile"&& (
+              <>
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate("/");
+                    }}
+                  >
+                    Home
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate("/");
+                      localStorage.removeItem("authToken");
+                      localStorage.removeItem("isLoggedIn");
+                      props.setLogstat();
+                      props.notifysuccess("Successfully Logged out");
+                      console.log(location.pathname);
+                    }}
+                  >
+                    Logout
+                  </button>
+                </li>
+              </>
+            )}
+            {props.isLoggedIn && location.pathname === "/" && (
+              <>
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate("/Profile");
+                    }}
+                  >
+                    My Profile
+                  </button>
+                </li>
+              </>
             )}
           </ul>
         </div>

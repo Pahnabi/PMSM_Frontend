@@ -36,8 +36,9 @@ const Login = (props) => {
             localStorage.setItem("authToken", res.data.authToken);
             localStorage.setItem("isLoggedIn", "true");
 
-            // navigate("/profile");
             props.setOpenModal();
+            props.setLogstat();
+            navigate("/Profile");
           } else {
             console.log(res);
           }
@@ -114,7 +115,6 @@ const Login = (props) => {
         ></div>
         <div className="login2-main modal-content">
           <input type="checkbox" id="login2-chk" aria-hidden="true" />
-
           <div className="login2-signup">
             <div className="modal-closer">
               <p
@@ -169,10 +169,7 @@ const Login = (props) => {
             </form>
           </div>
 
-          {/* Sign-up */}
-          {/* Sign-up */}
-          {/* Sign-up */}
-          {/* Sign-up */}
+          
           {/* Sign-up */}
           <div className="login2-login">
             <form action="POST">

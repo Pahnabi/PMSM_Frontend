@@ -1,6 +1,9 @@
-// import React, { useState, useEffect } from "react";
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 // import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar1 from "./components/Navbar/Navbar1";
 import About from "./components/About/About";
@@ -18,11 +21,23 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [modal, setModal] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+
+  useEffect(() => {
+    const loggedInStatus = localStorage.getItem("isLoggedIn");
+    setIsLoggedIn(loggedInStatus === "true");
+
+  }, []);
 
   const toggleModal = () => {
     setModal((prev) => {
       return !prev;
     });
+  };
+
+  const toggleLogstat = () => {
+    const loggedInStatus = localStorage.getItem("isLoggedIn");
+    setIsLoggedIn(loggedInStatus === "true");
   };
 
   // toast
@@ -56,7 +71,13 @@ function App() {
   return (
     <Router>
       <>
-        <Navbar1 setOpenModal={toggleModal} />
+        <Navbar1
+          setOpenModal={toggleModal}
+          setLogstat={toggleLogstat}
+          isLoggedIn={isLoggedIn}
+          notifyerror={notifyerror}
+          notifysuccess={notifysuccess}
+        />
         <ToastContainer />
         <Routes>
           <Route
@@ -89,6 +110,7 @@ function App() {
         {modal && (
           <Login
             setOpenModal={toggleModal}
+            setLogstat={toggleLogstat}
             notifysuccess={notifysuccess}
             notifyerror={notifyerror}
           />
