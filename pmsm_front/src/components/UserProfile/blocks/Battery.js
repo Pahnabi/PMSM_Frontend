@@ -75,10 +75,11 @@ const BatteryComponent = () => {
   };
 
   return (
-      <div className="battery__card">
+    <div className="battery__card">
         <div className="battery__data">
           <p className="battery__text">Battery</p>
           <h1 className="battery__percentage">{level}%</h1>
+          <p className="battery__text">{level} miles left</p>
           <p className="battery__status" dangerouslySetInnerHTML={{ __html: statusText }}></p>
         </div>
         <div className="battery__pill">
@@ -86,7 +87,7 @@ const BatteryComponent = () => {
             <div className={`battery__liquid ${batteryLiquidClass}`} style={{ height: batteryLiquidHeight }}></div>
           </div>
         </div>
-      </div>
+    </div>
   );
 };
 
