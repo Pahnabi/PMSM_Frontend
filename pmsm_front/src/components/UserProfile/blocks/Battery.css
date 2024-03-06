@@ -61,6 +61,13 @@ body {
   margin: 0 1.5rem;
 } */
 
+.battery__card__2{
+    display: grid;
+    place-items: center;
+    margin: 0 1.5rem;
+
+}
+
 .battery__card {
   position: relative;
   width: 100%;

@@ -1,7 +1,8 @@
 import React from "react";
 import "./UserProfile.css";
-import carimg from "../../Media/car1.jpeg"
+import carimg from "../../Media/car5.png"
 import BatteryComponent from "./blocks/Battery"
+import EVHealth from "./blocks/EVHealth"
 
 const UserProfile = () => {
   const batteryLevel = 70;
@@ -21,7 +22,9 @@ const UserProfile = () => {
           <div className="user-profile-box-1">
             <BatteryComponent />
           </div>
-          <div className="user-profile-box-2"></div>
+          <div className="user-profile-box-2">
+            <EVHealth percentage={85} />
+          </div>
         </div>
         <div className="user-profile-right-bottom">
           <div className="user-profile-box-3"></div>
