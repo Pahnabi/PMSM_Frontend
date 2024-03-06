@@ -1,5 +1,8 @@
 import React from "react";
 import "./UserProfile.css";
+import carimg from "../../Media/car5.png"
+import BatteryComponent from "./blocks/Battery"
+import EVHealth from "./blocks/EVHealth"
 
 const UserProfile = () => {
   const batteryLevel = 70;
@@ -10,39 +13,25 @@ const UserProfile = () => {
   };
 
   return (
-    <div className="user-page">
-      <div className="row0"></div>
-      <div className="row1">
-        <div className="box0">{/* Content for the first box */}</div>
-        <div className="box1">
-          <div className="battery-indicator">
-            <div
-              className="battery-level"
-              style={{ width: `${batteryLevel}%` }}
-            ></div>
+    <div className="user-profile">
+      <div className="user-profile-left">
+        <img src={carimg}/>
+      </div>
+      <div className="user-profile-right">
+        <div className="user-profile-right-top">
+          <div className="user-profile-box-1">
+            <BatteryComponent />
+          </div>
+          <div className="user-profile-box-2">
+            <EVHealth percentage={85} />
           </div>
         </div>
-        {/* <div className="box2"> */}
-        {/* Content for the second box */}
-        <div className="evhealth-percent">
-          <svg>
-            <circle cx="70" cy="70" r="70"></circle>
-            <circle cx="70" cy="70" r="70"></circle>
-          </svg>
-          {/* <div className="evhealth-number">
-            <h2>
-              60 <span>%</span>
-            </h2>
-          </div> */}
+        <div className="user-profile-right-bottom">
+          <div className="user-profile-box-3"></div>
+          <div className="user-profile-box-4"></div>
         </div>
-        {/* </div> */}
+
       </div>
-      <div className="row2">
-        <div className="box0">{/* Content for the first box */}</div>
-        <div className="box3">{/* Content for the third box */}</div>
-        <div className="box4">{/* Content for the fourth box */}</div>
-      </div>
-      <div className="row0"></div>
     </div>
   );
 };
