@@ -5,13 +5,7 @@ import BatteryComponent from "./blocks/Battery"
 import EVHealth from "./blocks/EVHealth"
 
 const UserProfile = () => {
-  const batteryLevel = 70;
-  const inlineStyles = {
-    stroke: `#8bc34a`,
-    strokedashoffset: `calc(440 - (440 * 69) / 100)`,
-    // animation: animate 1s linear forwards;
-  };
-
+  
   return (
     <div className="user-profile">
       <div className="user-profile-left">
@@ -23,12 +17,17 @@ const UserProfile = () => {
             <BatteryComponent />
           </div>
           <div className="user-profile-box-2">
-            <EVHealth percentage={85} />
+            <EVHealth percentage={90} />
           </div>
         </div>
         <div className="user-profile-right-bottom">
-          <div className="user-profile-box-3"></div>
-          <div className="user-profile-box-4"></div>
+          <div className="user-profile-box-3">
+            <div className="battery__card"></div>  
+          </div>
+          <div className="user-profile-box-4">
+          <div className="battery__card"></div>  
+
+          </div>
         </div>
 
       </div>
