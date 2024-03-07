@@ -3,7 +3,10 @@ import React, { useState, useEffect } from 'react';
 import "./EVHealth2.css";
 
   
-const RatingComponent = () => {
+const RatingComponent = ({valueused}) => {
+
+    const clr = (valueused<20)? '#f00': (valueused<40)? '#ff8000': (valueused<60)? '#ffcc00': '#00ff00';
+
     const [ratingBlocks, setRatingBlocks] = useState([]);
   
     useEffect(() => {
@@ -14,9 +17,10 @@ const RatingComponent = () => {
         //   animationDelay: `${i / 40}s`,
         };
   
-        if (i <= 90) {
-          ratingBlockStyle.background = '#0f0';
-          ratingBlockStyle.boxShadow = '0 0 15px #0f0, 0 0 30px #0f0';
+        if (i <= (valueused)) {
+          ratingBlockStyle.background = clr;
+          ratingBlockStyle.boxShadow = '0 0 15px ' + clr + ', 0 0 30px ' + clr;
+          //  #0f0, 0 0 30px #0f0';
         }
   
         blocks.push(
@@ -39,12 +43,12 @@ const RatingComponent = () => {
 };
 
 
-const EVHealth2 = () => {
+const EVHealth2 = ({healthvalue}) => {
     return (
         <div className="ev_card">
             <div className="ev_rating">
-                <RatingComponent />
-                <h2><span className="ev_counter" data-target="">90% <br/> Health</span></h2>
+                <RatingComponent valueused={healthvalue}/>
+                <h2><span className="ev_counter" data-target="">{healthvalue}% <br/> Health</span></h2>
                 <div className="ev_block"></div>
             </div>
         </div>
