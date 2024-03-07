@@ -64,7 +64,7 @@ body {
 .battery__card {
   position: relative;
   width: 100%;
-  height: 240px;
+  height: 12vw;
   background-color: var(--container-color);
   padding: 1.5rem 2rem;
   border-radius: 1.5rem;
