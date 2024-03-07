@@ -20,7 +20,7 @@ const UserProfile = () => {
           </div>
           <div className="user-profile-box-2">
             <div className="battery__card">
-              <EVHealth2 />
+              <EVHealth2 healthvalue={65}/>
             </div>
           </div>
         </div>
