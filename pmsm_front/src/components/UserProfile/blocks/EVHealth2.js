@@ -1,3 +1,4 @@
+// variables line 17 and line 47
 import React, { useState, useEffect } from 'react';
 import "./EVHealth2.css";
 
@@ -13,7 +14,7 @@ const RatingComponent = () => {
         //   animationDelay: `${i / 40}s`,
         };
   
-        if (i <= 100) {
+        if (i <= 90) {
           ratingBlockStyle.background = '#0f0';
           ratingBlockStyle.boxShadow = '0 0 15px #0f0, 0 0 30px #0f0';
         }
@@ -43,7 +44,7 @@ const EVHealth2 = () => {
         <div className="ev_card">
             <div className="ev_rating">
                 <RatingComponent />
-                <h2><span className="ev_counter" data-target="">90%</span></h2>
+                <h2><span className="ev_counter" data-target="">90% <br/> Health</span></h2>
                 <div className="ev_block"></div>
             </div>
         </div>

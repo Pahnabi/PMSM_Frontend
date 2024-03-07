@@ -18,13 +18,14 @@ const UserProfile = () => {
             <BatteryComponent />
           </div>
           <div className="user-profile-box-2">
-            <EVHealth percentage={90} />
+          <div className="battery__card">
+              <EVHealth2/></div>  
           </div>
         </div>
         <div className="user-profile-right-bottom">
           <div className="user-profile-box-3">
             <div className="battery__card">
-              <EVHealth2/></div>  
+            </div>  
           </div>
           <div className="user-profile-box-4">
           <div className="battery__card"></div>  
