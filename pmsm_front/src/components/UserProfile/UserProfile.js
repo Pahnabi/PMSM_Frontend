@@ -3,6 +3,7 @@ import "./UserProfile.css";
 import carimg from "../../Media/car5.png"
 import BatteryComponent from "./blocks/Battery"
 import EVHealth from "./blocks/EVHealth"
+import EVHealth2 from "./blocks/EVHealth2";
 
 const UserProfile = () => {
   
@@ -22,7 +23,8 @@ const UserProfile = () => {
         </div>
         <div className="user-profile-right-bottom">
           <div className="user-profile-box-3">
-            <div className="battery__card"></div>  
+            <div className="battery__card">
+              <EVHealth2/></div>  
           </div>
           <div className="user-profile-box-4">
           <div className="battery__card"></div>  
