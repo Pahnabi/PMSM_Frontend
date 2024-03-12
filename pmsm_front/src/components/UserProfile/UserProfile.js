@@ -27,7 +27,7 @@ const UserProfile = () => {
         <div className="user-profile-right-bottom">
           <div className="user-profile-box-3">
             <div className="battery__card">
-              <MapContainer
+              {/* <MapContainer
                 center={[51.505, -0.09]}
                 zoom={13}
                 style={{ height: "auto", width: "100px" }}
@@ -41,7 +41,7 @@ const UserProfile = () => {
                     A pretty CSS3 popup. <br /> Easily customizable.
                   </Popup>
                 </Marker>
-              </MapContainer>
+              </MapContainer> */}
             </div>
           </div>
           <div className="user-profile-box-4">
