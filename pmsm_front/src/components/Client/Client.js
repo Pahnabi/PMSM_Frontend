@@ -19,9 +19,9 @@ function About() {
           className="about-content"
         >
          <ul className="list-disc pl-6 mb-6">
-          <li className="text-3xl">Battery Vendors</li>
-          <li className="text-3xl">EV manufacturers</li>
-          <li className="text-3xl">Energy companies</li>
+          <p className="text-3xl">Battery Vendors</p>
+          <p className="text-3xl">EV manufacturers</p>
+          <p className="text-3xl">Energy companies</p>
         </ul>
         </p>
         <div className="image-about"></div>
