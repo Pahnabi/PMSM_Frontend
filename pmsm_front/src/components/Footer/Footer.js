@@ -89,27 +89,22 @@ function Footer() {
         <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
           <li>
             <a href="#" class="mr-4 hover:underline md:mr-6 ">
-              About
+              About Us
             </a>
           </li>
           <li>
             <a href="#" class="mr-4 hover:underline md:mr-6">
-              Premium
+              Careers
             </a>
           </li>
           <li>
             <a href="#" class="mr-4 hover:underline md:mr-6 ">
-              Initiatives
+              Become Partner
             </a>
           </li>
           <li>
             <a href="#" class="mr-4 hover:underline md:mr-6">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">
-              Affiliate Program
+              Privacy Policy
             </a>
           </li>
           <li>
@@ -119,7 +114,7 @@ function Footer() {
           </li>
           <li>
             <a href="#" class="mr-4 hover:underline md:mr-6">
-              Contact
+              Terms  of Services
             </a>
           </li>
         </ul>
