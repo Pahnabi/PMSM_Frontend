@@ -94,7 +94,7 @@ function App() {
                   <Services />
                 </div>
                 <div id="client">
-                  <Client />
+                  {/* <Client /> */}
                 </div>
                 {/* <div id="team">
                   <Team />

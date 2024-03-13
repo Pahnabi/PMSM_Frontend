@@ -3,7 +3,7 @@ import './Readytrack.css';
 
 function Readytrack() {
   return (
-    <section class="bg-white dark:bg-gray-900">
+    <section class="ready-track-page">
       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
           Are you ready to start tracking your EVs
