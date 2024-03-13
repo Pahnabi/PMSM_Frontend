@@ -4,7 +4,6 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-// import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar1 from "./components/Navbar/Navbar1";
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
@@ -17,7 +16,7 @@ import Current from "./components/Current/Current";
 import Client from "./components/Client/Client";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import Readytrack from "./components/Readytrack/Readytrack";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -96,14 +95,14 @@ function App() {
                 <div id="client">
                   <Client />
                 </div>
-                <div id="team">
+                {/* <div id="team">
                   <Team />
-                </div>
+                </div> */}
+                <Readytrack />
                 <Footer />
               </>
             }
           />
-
           <Route exact path="/profile" element={<UserProfile />} />
           <Route exact path="/current" element={<Current />} />
         </Routes>
