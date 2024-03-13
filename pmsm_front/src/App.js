@@ -19,6 +19,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Readytrack from "./components/Readytrack/Readytrack";
 import Adaptiveplatform from "./components/Adaptiveplatform/Adaptiveplatform";
 import Platformadvantage from "./components/Platformadvantage/Platformadvantage";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -108,7 +109,8 @@ function App() {
             }
           />
           <Route exact path="/profile" element={<UserProfile />} />
-          <Route exact path="/current" element={<Current />} />
+          {/* <Route exact path="/current" element={<Current />} /> */}
+          <Route exact path="/contact" element={<Contact />} />
         </Routes>
         {modal && (
           <Login
