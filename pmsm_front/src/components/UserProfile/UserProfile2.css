@@ -9,7 +9,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     grid-auto-rows: minmax(auto, 1fr);
-    font: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 
