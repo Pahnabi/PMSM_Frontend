@@ -12,7 +12,7 @@ import Home from "./components/LandingPage/Home";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/LoginSignup/Login";
 import UserProfile2 from "./components/UserProfile/UserProfile2";
-import Current from "./components/Current/Current";
+// import Current from "./components/Current/Current";
 import Client from "./components/Client/Client";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -110,7 +110,7 @@ function App() {
           />
 
           <Route exact path="/profile" element={<UserProfile2 />} />
-          <Route exact path="/current" element={<Current />} />
+          {/* <Route exact path="/current" element={<Current />} /> */}
           <Route exact path="/contact" element={<Contact />} />
 
         </Routes>
