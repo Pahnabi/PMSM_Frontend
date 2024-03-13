@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 .services-page {
-    /* background-image: linear-gradient(to right bottom, #ddbe9b, #e3c9a8, #e9d4b5, #efdfc2, #f6ead0, #f5e6ca, #f4e2c3, #f3debd, #eccaa3, #e7b58b, #e2a076, #dd8965); */
-    background-image: linear-gradient(to right bottom, #001536, #28153c, #29123f, #0b183e, #00124e);
-    /* font-family: 'Oswald', sans-serif; */
+    background-image: linear-gradient(to right top, #000000, #0b0407, #110910, #140d17, #15121e, #131623, #0f1a28, #081e2c, #01222e, #00262e, #002a2d, #002d2a) !important;
     overflow: hidden;
 }
 
@@ -15,13 +13,13 @@
     font-size: 2.5rem;
     font-weight: 900;
     color: #ffdfdf;
-    
+
 }
 
-.services-side-image
-{
+.services-side-image {
     /* box-shadow: 0px 0px 50px rgb(0, 0, 0); */
 }
+
 .service-content-heading {
     display: flex;
     /* justify-content: center; */
@@ -55,19 +53,20 @@
     justify-content: center;
 }
 
-.service-card
-{
+.service-card {
     width: 20vw;
     margin: 5px;
     padding: 20px;
     /* font-size: 0.5rem; */
     /* background-color: red; */
     transition: 1s ease;
-    box-shadow: 0px 0px 50px rgb(0, 0, 0);
+    /* box-shadow: 0px 0px 50px rgb(0, 0, 0); */
+    background-color: transparent;
 }
-.service-card:hover
-{
-background-image: linear-gradient(to right top, #ffe382, #fde78f, #fbec9d, #faefaa, #f9f3b7, #f7f5bb, #f6f7bf, #f4f9c3, #effabf, #eafcbc, #e3fdb9, #dcffb7);box-shadow: 0px 0px 20px rgb(161, 161, 161);
-cursor: pointer;
-transform: scale(1.05) !important;
-}
+
+/* .service-card:hover {
+    background-image: linear-gradient(to right top, #ffe382, #fde78f, #fbec9d, #faefaa, #f9f3b7, #f7f5bb, #f6f7bf, #f4f9c3, #effabf, #eafcbc, #e3fdb9, #dcffb7);
+    box-shadow: 0px 0px 20px rgb(161, 161, 161);
+    cursor: pointer;
+    transform: scale(1.05) !important;
+} */

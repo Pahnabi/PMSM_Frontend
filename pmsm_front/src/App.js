@@ -18,6 +18,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Readytrack from "./components/Readytrack/Readytrack";
 import Adaptiveplatform from "./components/Adaptiveplatform/Adaptiveplatform";
+import Platformadvantage from "./components/Platformadvantage/Platformadvantage";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -100,6 +101,7 @@ function App() {
                   <Team />
                 </div> */}
                 <Adaptiveplatform />
+                <Platformadvantage />
                 <Readytrack />
                 <Footer />
               </>
