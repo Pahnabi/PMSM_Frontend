@@ -79,8 +79,8 @@ function Navbar1(props) {
               </Link>
             </li>
             <li>
-              <Link to="client" spy={true} smooth={true} duration={500}>
-                Client
+              <Link to="initiatives" spy={true} smooth={true} duration={500}>
+                Initiatives
               </Link>
             </li>
             <li>
@@ -123,23 +123,28 @@ function Navbar1(props) {
                   </Link>
                 </li>
                 <li>
-                  <Link to="about" spy={true} smooth={true} duration={500}>
+                  <Link to="about" spy={true} smooth={true} duration={700}>
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link to="services" spy={true} smooth={true} duration={500}>
-                    Services
+                  <Link
+                    to="initiatives"
+                    spy={true}
+                    smooth={true}
+                    duration={700}
+                  >
+                    Initiatives
                   </Link>
                 </li>
                 <li>
-                  <Link to="client" spy={true} smooth={true} duration={500}>
-                    Client
+                  <Link to="advantages" spy={true} smooth={true} duration={500}>
+                    Advantages
                   </Link>
                 </li>
                 <li>
-                  <Link to="team" spy={true} smooth={true} duration={500}>
-                    Team
+                  <Link to="track" spy={true} smooth={true} duration={500}>
+                    Track
                   </Link>
                 </li>
               </>
@@ -156,7 +161,7 @@ function Navbar1(props) {
                 </button>
               </li>
             )}
-            {props.isLoggedIn && location.pathname === "/Profile"&& (
+            {props.isLoggedIn && location.pathname === "/Profile" && (
               <>
                 <li>
                   <button

@@ -13,7 +13,7 @@ function Contact() {
             Got a technical issue? Want to send feedback about a beta feature?
             Need details about our Business plan? Let us know.
           </p>
-          <form action="#" class="space-y-8">
+          <form action="#" className="contact-form space-y-8">
             <div>
               <label
                 for="email"

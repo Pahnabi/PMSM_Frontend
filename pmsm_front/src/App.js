@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar1 from "./components/Navbar/Navbar1";
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
@@ -12,8 +8,6 @@ import Home from "./components/LandingPage/Home";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/LoginSignup/Login";
 import UserProfile2 from "./components/UserProfile/UserProfile2";
-// import Current from "./components/Current/Current";
-import Client from "./components/Client/Client";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Readytrack from "./components/Readytrack/Readytrack";
@@ -28,7 +22,6 @@ function App() {
   useEffect(() => {
     const loggedInStatus = localStorage.getItem("isLoggedIn");
     setIsLoggedIn(loggedInStatus === "true");
-
   }, []);
 
   const toggleModal = () => {
@@ -95,15 +88,15 @@ function App() {
                 <div id="services">
                   <Services />
                 </div>
-                <div id="client">
-                  {/* <Client /> */}
+                <div id="initiatives">
+                  <Adaptiveplatform />
                 </div>
-                {/* <div id="team">
-                  <Team />
-                </div> */}
-                <Adaptiveplatform />
-                <Platformadvantage />
+                <div id="advantages">
+                  <Platformadvantage />
+                </div>
+                <div id="track">
                 <Readytrack />
+                </div>
                 <Footer />
               </>
             }
@@ -112,7 +105,6 @@ function App() {
           <Route exact path="/profile" element={<UserProfile2 />} />
           {/* <Route exact path="/current" element={<Current />} /> */}
           <Route exact path="/contact" element={<Contact />} />
-
         </Routes>
         {modal && (
           <Login
