@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Platformadvantage.css"
 
+import "aos/dist/aos.css";
+
 function Platformadvantage() {
   return (
     <div>
@@ -17,7 +19,11 @@ function Platformadvantage() {
               </p>
             </div>
             <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-12 md:space-y-0 justify-center">
-              <div className="adv-card">
+              <div
+                className="adv-card"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                   <span class="material-symbols-outlined">dynamic_form</span>
                 </div>
@@ -30,7 +36,11 @@ function Platformadvantage() {
                   error or downtime
                 </p>
               </div>
-              <div className="adv-card">
+              <div
+                className="adv-card"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                   <span class="material-symbols-outlined">manufacturing</span>
                 </div>
@@ -42,7 +52,11 @@ function Platformadvantage() {
                   either on premise or in public/private cloud infastructure
                 </p>
               </div>
-              <div className="adv-card">
+              <div
+                className="adv-card"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                   <span class="material-symbols-outlined">release_alert</span>
                 </div>
@@ -55,7 +69,11 @@ function Platformadvantage() {
                   without any downtime.
                 </p>
               </div>
-              <div className="adv-card">
+              <div
+                className="adv-card"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                   <span class="material-symbols-outlined">touch_app</span>
                 </div>

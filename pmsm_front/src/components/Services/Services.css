@@ -12,7 +12,7 @@
     margin-bottom: 8vh;
     font-size: 2.5rem;
     font-weight: 900;
-    color: #ffdfdf;
+    color: #ffffff;
 
 }
 
@@ -26,6 +26,11 @@
     align-items: center;
     margin-bottom: 10px;
     font-size: 1rem
+}
+
+.service-content-heading h2
+{
+    color: white;
 }
 
 .service-icon {

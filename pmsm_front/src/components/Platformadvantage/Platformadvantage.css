@@ -12,11 +12,13 @@
 }
 .platform-advantage-heading h2 {
     text-align: center;
+    font-family: 'Oswald', sans-serif;
     color: white !important;
 }
 
 .platform-advantage-subheading {
     text-align: center;
+    font-family: 'Oswald', sans-serif;
     /* justify-content: center; */
 }
 

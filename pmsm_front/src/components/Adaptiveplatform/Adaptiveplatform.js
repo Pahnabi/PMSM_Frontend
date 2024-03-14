@@ -1,5 +1,7 @@
 import React from "react";
-import './Adaptiveplatform.css'
+import "./Adaptiveplatform.css";
+
+import "aos/dist/aos.css";
 
 function Adaptiveplatform() {
   return (
@@ -10,12 +12,12 @@ function Adaptiveplatform() {
             <h2 class="Adaptive-platform-heading mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
               An adpative platform for your IoT initiatives
             </h2>
-            <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+            <p class="adaptive-subheading-1 text-gray-500 sm:text-xl dark:text-gray-400">
               With powerful built-in features, and intuitive user interface.
             </p>
           </div>
           <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-            <div>
+            <div data-aos="fade-up" data-aos-duration="600">
               <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                 <span class="monitoring-icon material-symbols-outlined">
                   monitoring
@@ -28,7 +30,7 @@ function Adaptiveplatform() {
                 Forecasting & Actionable insights
               </p>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="600">
               <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                 <span class="material-symbols-outlined">rule_settings</span>
               </div>
@@ -39,7 +41,7 @@ function Adaptiveplatform() {
                 Automated & Manual role creation & processing
               </p>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="600">
               <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                 <span class="material-symbols-outlined">database</span>
               </div>
@@ -50,7 +52,7 @@ function Adaptiveplatform() {
                 Device/Sensor/Operational data & information
               </p>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="600">
               <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                 <span class="material-symbols-outlined">satellite</span>
               </div>
@@ -59,7 +61,7 @@ function Adaptiveplatform() {
               </h3>
               <p class="text-gray-500 dark:text-gray-400"></p>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="600">
               <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                 <span class="material-symbols-outlined">switch_access_2</span>
               </div>
@@ -68,7 +70,7 @@ function Adaptiveplatform() {
               </h3>
               <p class="text-gray-500 dark:text-gray-400"></p>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="600">
               <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                 <span class="material-symbols-outlined">groups</span>
               </div>

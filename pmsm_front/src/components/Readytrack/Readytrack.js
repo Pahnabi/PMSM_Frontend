@@ -1,6 +1,8 @@
 import React from 'react'
 import './Readytrack.css';
 
+import "aos/dist/aos.css";
+
 function Readytrack() {
   return (
     <section class="ready-track-page">
@@ -11,7 +13,11 @@ function Readytrack() {
         <p class="mb-8 text-base font-normal text-gray-500 lg:text-lg sm:px-16 xl:px-48 dark:text-gray-400">
           Jump start your IoT journey today. Get in touch with us to know more.
         </p>
-        <div class="flex flex-col mb-0 lg:mb-0 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+        <div
+          class="flex flex-col mb-0 lg:mb-0 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
           <a
             href="/contact"
             class="contact-us-heading inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"

@@ -83,7 +83,7 @@ function Footer() {
           <span className="footer-main-heading material-symbols-outlined">
             satellite_alt
           </span>
-          <p className="footer-main-heading">SmartEV</p>
+          <p className="footer-main-heading-1">SmartEV</p>
         </a>
         <p class="my-6 text-gray-500 dark:text-gray-400">
           Redefining the Future of Electric Transportation.

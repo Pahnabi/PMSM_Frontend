@@ -1,6 +1,10 @@
 /* CSS for larger screens */
 /* CSS for larger screens */
+
 .navbar1 {
+  font-size: 1.2rem;
+  font-weight: 100;
+  font-family: 'Rubik',sans-serif;
   position: fixed;
   top: 0px;
   left: 0;
@@ -19,7 +23,8 @@
 }
 
 .solid {
-  background-color: #0f071e;
+  /* background-color: #0f071e; */
+  background-image: linear-gradient(to right bottom, #180c1a, #140812, #0a0307, #050203, #000000) !important;
 }
 
 .left-section {
@@ -57,7 +62,8 @@
 .right-section button {
   text-decoration: none;
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-weight: 700;
   cursor: pointer;
   transition: color 0.3s ease;
 }
