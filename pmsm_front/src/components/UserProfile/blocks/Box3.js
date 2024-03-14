@@ -2,6 +2,8 @@ import React from "react";
 import "./Box3.css";
 import BatteryComponent from "./BatteryComponent";
 import EVHealth from "./EVHealth";
+import LastChargeInfo from "./LastChargeInfo";
+import ChargeHistory from "./ChargeHistory";
 
 const Box3 = () => {
   return (
@@ -12,7 +14,10 @@ const Box3 = () => {
           <EVHealth healthvalue={80} />
         </div>
       </div>
-      <div className="energy-usage">Ipsum </div>
+      <div className="energy-usage">
+        <LastChargeInfo/>
+        <ChargeHistory/>
+      </div>
     </div>
   );
 };
