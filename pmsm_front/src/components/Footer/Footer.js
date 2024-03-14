@@ -80,13 +80,15 @@ function Footer() {
           href="#"
           class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
         >
-          <span class="material-symbols-outlined">satellite_alt</span>
-          SmartEV
+          <span className="footer-main-heading material-symbols-outlined">
+            satellite_alt
+          </span>
+          <p className="footer-main-heading">SmartEV</p>
         </a>
         <p class="my-6 text-gray-500 dark:text-gray-400">
           Redefining the Future of Electric Transportation.
         </p>
-        <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+        <ul class="footer-main-heading flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
           <li>
             <a href="#" class="mr-4 hover:underline md:mr-6 ">
               About Us
@@ -114,7 +116,7 @@ function Footer() {
           </li>
           <li>
             <a href="#" class="mr-4 hover:underline md:mr-6">
-              Terms  of Services
+              Terms of Services
             </a>
           </li>
         </ul>

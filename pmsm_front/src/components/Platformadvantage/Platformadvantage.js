@@ -21,7 +21,7 @@ function Platformadvantage() {
                 <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                   <span class="material-symbols-outlined">dynamic_form</span>
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">
+                <h3 class="platform-advantage-listheaeding mb-2 text-xl font-bold dark:text-white">
                   Fast, Scalable & Elastic
                 </h3>
                 <p class="text-gray-500 dark:text-gray-400">
@@ -34,7 +34,7 @@ function Platformadvantage() {
                 <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                   <span class="material-symbols-outlined">manufacturing</span>
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">
+                <h3 class="platform-advantage-listheaeding mb-2 text-xl font-bold dark:text-white">
                   Agnostic and Independent
                 </h3>
                 <p class="text-gray-500 dark:text-gray-400">
@@ -46,7 +46,7 @@ function Platformadvantage() {
                 <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                   <span class="material-symbols-outlined">release_alert</span>
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">
+                <h3 class="platform-advantage-listheaeding mb-2 text-xl font-bold dark:text-white">
                   Fault Tolerance
                 </h3>
                 <p class="text-gray-500 dark:text-gray-400">
@@ -59,7 +59,7 @@ function Platformadvantage() {
                 <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                   <span class="material-symbols-outlined">touch_app</span>
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">
+                <h3 class="platform-advantage-listheaeding mb-2 text-xl font-bold dark:text-white">
                   Usability
                 </h3>
                 <p class="text-gray-500 dark:text-gray-400">

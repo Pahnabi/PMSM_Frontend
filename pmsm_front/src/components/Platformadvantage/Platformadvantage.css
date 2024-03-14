@@ -12,6 +12,7 @@
 }
 .platform-advantage-heading h2 {
     text-align: center;
+    color: white !important;
 }
 
 .platform-advantage-subheading {
@@ -42,4 +43,9 @@
 
 .adv-card:hover {
     background-color: #000000;
+}
+
+.platform-advantage-listheaeding
+{
+    color: white;
 }
