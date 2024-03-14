@@ -1,9 +1,10 @@
 import React from "react";
+import "./Contact.css";
 
 function Contact() {
   return (
-    <div>
-      <section class="bg-white dark:bg-gray-900">
+    <div className="contact-page">
+      <section class="">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
             Contact Us
