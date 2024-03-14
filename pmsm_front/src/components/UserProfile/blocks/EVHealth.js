@@ -1,57 +1,58 @@
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
-import React from "react";
-import { render } from "react-dom";
+// variables line 17 and line 47
+import React, { useState, useEffect } from 'react';
 import "./EVHealth.css";
 
-const EVHealth = ({percentage}) => {
+  
+const RatingComponent = ({valueused}) => {
 
-    const bgclr1 = (percentage) => {
-        if(percentage < 20) {
-            return "linear-gradient(90deg, hsl(7, 89%, 46%) 15%, hsl(11, 93%, 68%) 100%)";
-        } else if(percentage < 40) {
-            return "linear-gradient(90deg, hsl(22, 89%, 46%) 15%, hsl(54, 90%, 45%) 100%)";
-        }  else if(percentage < 80){
-            return "linear-gradient(90deg, hsl(54, 89%, 46%) 15%, hsl(92, 90%, 45%) 100%)";
-        }
-        else {
-            return "linear-gradient(90deg, hsl(92, 89%, 46%) 15%, hsl(92, 90%, 68%) 100%)";
-        }
-    }
+    const clr = (valueused<20)? '#f00': (valueused<40)? '#ff8000': (valueused<60)? '#ffcc00': '#00ff00';
 
-    const bgclr2 = (percentage) => {
-        if(percentage < 20) {
-            return "hsl(11, 93%, 68%)";
-        } else if(percentage < 40) {
-            return "hsl(54, 90%, 45%)";
-        }  else if(percentage < 80){
-            return "hsl(92, 90%, 45%)";
+    const [ratingBlocks, setRatingBlocks] = useState([]);
+  
+    useEffect(() => {
+      const blocks = [];
+      for (let i = 1; i <= 100; i++) {
+        const ratingBlockStyle = {
+          transform: `rotate(${3.6 * i}deg)`,
+        //   animationDelay: `${i / 40}s`,
+        };
+  
+        if (i <= (valueused)) {
+          ratingBlockStyle.background = clr;
+          ratingBlockStyle.boxShadow = '0 0 15px ' + clr + ', 0 0 30px ' + clr;
+          //  #0f0, 0 0 30px #0f0';
         }
-        else {
-            return "hsl(92, 90%, 68%)";
-        }
-    }
-
+  
+        blocks.push(
+          <div
+            key={i}
+            className="ev_block"
+            style={ratingBlockStyle}
+          ></div>
+        );
+      }
+      setRatingBlocks(blocks);
+    }, []);
     return (
-        <div className="battery__card">
-            <div className="battery__card__2">
-            <div className="battery__health" style={{ width: 200, height: 200 }}>
-            <CircularProgressbar
-            value={percentage}
-            text={`${percentage}%`}
-            background
-            backgroundPadding={6}
-            styles={buildStyles({
-            backgroundColor: `${bgclr2(percentage)}`,
-            textColor: "#fff",
-            pathColor: "#fff",
-            trailColor: "transparent"
-            })}
-        />
+      <div>
+        <div className="ev_rating">
+          {ratingBlocks}
         </div>
+      </div>
+    );
+};
+
+
+const EVHealth = ({healthvalue}) => {
+    return (
+        <div className="ev_card">
+            <div className="ev_rating">
+                <RatingComponent valueused={healthvalue}/>
+                <h2><span className="ev_counter" data-target="">{healthvalue}% <br/> Health</span></h2>
+                <div className="ev_block"></div>
+            </div>
         </div>
-      </div> 
     );
 }
-
 export default EVHealth;
+

@@ -4,7 +4,6 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-// import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar1 from "./components/Navbar/Navbar1";
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
@@ -12,12 +11,15 @@ import Team from "./components/Team/Team";
 import Home from "./components/LandingPage/Home";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/LoginSignup/Login";
-import UserProfile from "./components/UserProfile/UserProfile";
-import Current from "./components/Current/Current";
+import UserProfile2 from "./components/UserProfile/UserProfile2";
+// import Current from "./components/Current/Current";
 import Client from "./components/Client/Client";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import Readytrack from "./components/Readytrack/Readytrack";
+import Adaptiveplatform from "./components/Adaptiveplatform/Adaptiveplatform";
+import Platformadvantage from "./components/Platformadvantage/Platformadvantage";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -94,18 +96,23 @@ function App() {
                   <Services />
                 </div>
                 <div id="client">
-                  <Client />
+                  {/* <Client /> */}
                 </div>
-                <div id="team">
+                {/* <div id="team">
                   <Team />
-                </div>
+                </div> */}
+                <Adaptiveplatform />
+                <Platformadvantage />
+                <Readytrack />
                 <Footer />
               </>
             }
           />
 
-          <Route exact path="/profile" element={<UserProfile />} />
-          <Route exact path="/current" element={<Current />} />
+          <Route exact path="/profile" element={<UserProfile2 />} />
+          {/* <Route exact path="/current" element={<Current />} /> */}
+          <Route exact path="/contact" element={<Contact />} />
+
         </Routes>
         {modal && (
           <Login
