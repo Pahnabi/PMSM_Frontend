@@ -85,9 +85,7 @@
     display: none; /* Hide right section on smaller screens */
   }
 
-  .sidebar{
-    display:none;
-  }
+  
 
   .sidebar.open {
     position: fixed;
@@ -98,6 +96,7 @@
     background: #0f071e;
     transition: left 0.3s ease;
     z-index: 1;
+    
   }
 
   .sidebar ul {

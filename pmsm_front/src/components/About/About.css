@@ -29,7 +29,7 @@
     margin: 0px 20vh;
     padding-top: 2vh;
     /* padding-bottom: 5vh ; */
-    font-size: 1rem;
+    font-size: 10rem;
     font-weight: 500;
     color: #999999;
     /* text-shadow: 2px 2px 5px #fff; */
@@ -37,7 +37,7 @@
 
 .image-about {
     /* display: inline-block; */
-    background-image: url('../../Media/about.webp');
+    background-image: url('../../Media/about.jpg');
     background-size: 100% 100%;
     background-position: center;
     height: 70vh;

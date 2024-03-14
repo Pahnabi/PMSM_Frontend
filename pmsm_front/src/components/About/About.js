@@ -13,10 +13,10 @@ function About() {
       <div className="about-page">
         <h1
           className="about-heading">
-          Transforming the distributed equipment industries with IoT and AI
+          Transforming the distributed EVs industries with IoT and AI
         </h1>
         <p
-          className="about-content"
+          className="about-content "
         >
           Revolutionize your Electric Vehicle monitoring service with IoT and
           AI, delivering real-time insights for optimized performance and

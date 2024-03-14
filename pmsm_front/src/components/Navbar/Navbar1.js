@@ -92,7 +92,7 @@ function Navbar1(props) {
               <li>
                 <button
                   onClick={() => {
-                    props.setOpenModal();
+                    props.setOpenModal(true);
                   }}
                 >
                   Login
@@ -149,7 +149,7 @@ function Navbar1(props) {
               <li>
                 <button
                   onClick={() => {
-                    props.setOpenModal();
+                    props.setOpenModal(true);
                   }}
                 >
                   Login

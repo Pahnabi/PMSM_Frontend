@@ -37,7 +37,7 @@
 
 .image-about {
     /* display: inline-block; */
-    background-image: url('../../Media/about.webp');
+    background-image: url('../../Media/about.jpg');
     background-size: 100% 100%;
     background-position: center;
     height: 70vh;
