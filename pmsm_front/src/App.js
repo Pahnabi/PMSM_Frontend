@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Navbar1 from "./components/Navbar/Navbar1";
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
@@ -7,8 +9,6 @@ import Home from "./components/LandingPage/Home";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/LoginSignup/Login";
 import UserProfile2 from "./components/UserProfile/UserProfile2";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Readytrack from "./components/Readytrack/Readytrack";
 import Adaptiveplatform from "./components/Adaptiveplatform/Adaptiveplatform";
 import Platformadvantage from "./components/Platformadvantage/Platformadvantage";
@@ -102,7 +102,6 @@ function App() {
           />
 
           <Route exact path="/profile" element={<UserProfile2 />} />
-          {/* <Route exact path="/current" element={<Current />} /> */}
           <Route exact path="/contact" element={<Contact />} />
         </Routes>
         {modal && (
