@@ -22,7 +22,7 @@ const Login = (props) => {
     e.preventDefault();
     try {
       await axios
-        .post("http://localhost:5000/login", {
+        .post("http://10.29.8.31:5000:5000/login", {
           userid,
           vehicleid,
           password,
@@ -66,7 +66,7 @@ const Login = (props) => {
     e.preventDefault();
     try {
       await axios
-        .post("http://localhost:5000/signup", {
+        .post("http://10.29.8.31:5000/signup", {
           userid,
           vehicleid,
           userType,
@@ -88,8 +88,6 @@ const Login = (props) => {
           }
         })
         .catch((e) => {
-          console.log(e);
-          console.log("1");
           if (e.response.status === 409) {
             props.notifyerror(
               "User already exists with this User Id or Vehicle Id."
