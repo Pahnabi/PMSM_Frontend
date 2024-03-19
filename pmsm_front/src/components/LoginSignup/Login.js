@@ -22,6 +22,7 @@ const Login = (props) => {
     e.preventDefault();
     try {
       await axios
+        // .post("http://localhost:5000/login", {
         .post("http://10.29.8.31:5000/login", {
           userid,
           vehicleid,
@@ -66,6 +67,7 @@ const Login = (props) => {
     e.preventDefault();
     try {
       await axios
+        // .post("http://localhost:5000/signup", {
         .post("http://10.29.8.31:5000/signup", {
           userid,
           vehicleid,
