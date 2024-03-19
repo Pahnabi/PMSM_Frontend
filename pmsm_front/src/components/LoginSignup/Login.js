@@ -82,7 +82,7 @@ const Login = (props) => {
             localStorage.setItem("isLoggedIn", "true");
             props.setOpenModal();
             props.setLogstat();
-            navigate("/profile");
+            navigate("/Profile");
           } else {
             console.log(res);
           }
