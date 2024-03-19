@@ -5,38 +5,38 @@ import "aos/dist/aos.css";
 
 function Readytrack() {
   return (
-    <section class="ready-track-page">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-        <h1 class="ready-track-page-heading mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
+    <section className="ready-track-page">
+      <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+        <h1 className="ready-track-page-heading mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
           Are you ready to start tracking your EVs
         </h1>
-        <p class="mb-8 text-base font-normal text-gray-500 lg:text-lg sm:px-16 xl:px-48 dark:text-gray-400">
+        <p className="mb-8 text-base font-normal text-gray-500 lg:text-lg sm:px-16 xl:px-48 dark:text-gray-400">
           Jump start your IoT journey today. Get in touch with us to know more.
         </p>
         <div
-          class="flex flex-col mb-0 lg:mb-0 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
+          className="flex flex-col mb-0 lg:mb-0 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
           data-aos="fade-up"
           data-aos-duration="600"
         >
           <a
             href="/contact"
-            class="contact-us-heading inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            className="contact-us-heading inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
           >
-            <span class="contact-us-heading material-symbols-outlined contact-icon">
+            <span className="contact-us-heading material-symbols-outlined contact-icon">
               contacts
             </span>
             Contact Us
           </a>
         </div>
-        {/* <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
-          <span class="font-semibold text-gray-400 uppercase">FEATURED IN</span>
-          <div class="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
+        {/* <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+          <span className="font-semibold text-gray-400 uppercase">FEATURED IN</span>
+          <div className="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
             <a
               href="#"
-              class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+              className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
             >
               <svg
-                class="h-8"
+                className="h-8"
                 viewBox="0 0 132 29"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,10 +81,10 @@ function Readytrack() {
             </a>
             <a
               href="#"
-              class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+              className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
             >
               <svg
-                class="h-11"
+                className="h-11"
                 viewBox="0 0 208 42"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,10 +105,10 @@ function Readytrack() {
             </a>
             <a
               href="#"
-              class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+              className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
             >
               <svg
-                class="h-11"
+                className="h-11"
                 viewBox="0 0 120 41"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

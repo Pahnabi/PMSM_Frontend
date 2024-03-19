@@ -74,55 +74,55 @@ function Footer() {
     //   </div>
     // </div>
 
-    <footer class="footer-main p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
-      <div class="mx-auto max-w-screen-xl text-center">
+    <footer className="footer-main p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+      <div className="mx-auto max-w-screen-xl text-center">
         <a
           href="#"
-          class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
+          className="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
         >
           <span className="footer-main-heading material-symbols-outlined">
             satellite_alt
           </span>
           <p className="footer-main-heading-1">SmartEV</p>
         </a>
-        <p class="my-6 text-gray-500 dark:text-gray-400">
+        <p className="my-6 text-gray-500 dark:text-gray-400">
           Redefining the Future of Electric Transportation.
         </p>
-        <ul class="footer-main-heading flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+        <ul className="footer-main-heading flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
           <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6 ">
+            <a href="#" className="mr-4 hover:underline md:mr-6 ">
               About Us
             </a>
           </li>
           <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">
+            <a href="#" className="mr-4 hover:underline md:mr-6">
               Careers
             </a>
           </li>
           <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6 ">
+            <a href="#" className="mr-4 hover:underline md:mr-6 ">
               Become Partner
             </a>
           </li>
           <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">
+            <a href="#" className="mr-4 hover:underline md:mr-6">
               Privacy Policy
             </a>
           </li>
           <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">
+            <a href="#" className="mr-4 hover:underline md:mr-6">
               FAQs
             </a>
           </li>
           <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">
+            <a href="#" className="mr-4 hover:underline md:mr-6">
               Terms of Services
             </a>
           </li>
         </ul>
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2024{" "}
-          <a href="#" class="hover:underline">
+          <a href="#" className="hover:underline">
             SmartEV™
           </a>
           . All Rights Reserved.
