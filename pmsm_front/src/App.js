@@ -7,7 +7,7 @@ import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import Home from "./components/LandingPage/Home";
 import Footer from "./components/Footer/Footer";
-import Login from "./components/LoginSignup/Login";
+import Login from "./components/LoginSignup/Login2";
 import UserProfile2 from "./components/UserProfile/UserProfile2";
 import Readytrack from "./components/Readytrack/Readytrack";
 import Adaptiveplatform from "./components/Adaptiveplatform/Adaptiveplatform";
