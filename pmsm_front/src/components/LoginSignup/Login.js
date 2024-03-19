@@ -22,7 +22,7 @@ const Login = (props) => {
     e.preventDefault();
     try {
       await axios
-        .post("http://10.29.8.31:5000:5000/login", {
+        .post("http://10.29.8.31:5000/login", {
           userid,
           vehicleid,
           password,
