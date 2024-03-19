@@ -1,9 +1,9 @@
 import React, { useState, useEffect} from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
-import "./Navbar1.css";
+import "./Navbar.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
-function Navbar1(props) {
+function Navbar(props) {
   const location = useLocation();
   // const location="";
 
@@ -208,4 +208,4 @@ function Navbar1(props) {
   );
 }
 
-export default Navbar1;
+export default Navbar;

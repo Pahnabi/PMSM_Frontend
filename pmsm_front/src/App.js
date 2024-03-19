@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Navbar1 from "./components/Navbar/Navbar1";
+import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import Home from "./components/LandingPage/Home";
 import Footer from "./components/Footer/Footer";
-import Login from "./components/LoginSignup/Login2";
+import Login from "./components/LoginSignup/Login";
 import UserProfile2 from "./components/UserProfile/UserProfile2";
 import Readytrack from "./components/Readytrack/Readytrack";
 import Adaptiveplatform from "./components/Adaptiveplatform/Adaptiveplatform";
@@ -65,7 +65,7 @@ function App() {
   return (
     <Router>
       <>
-        <Navbar1
+        <Navbar
           setOpenModal={toggleModal}
           setLogstat={toggleLogstat}
           isLoggedIn={isLoggedIn}
