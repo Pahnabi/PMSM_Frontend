@@ -13,6 +13,8 @@ import Readytrack from "./components/Readytrack/Readytrack";
 import Adaptiveplatform from "./components/Adaptiveplatform/Adaptiveplatform";
 import Platformadvantage from "./components/Platformadvantage/Platformadvantage";
 import Contact from "./components/Contact/Contact";
+import PrivateRoutes from "./utils/PrivateRoutes";
+import Notfound from "./components/NotFound/Notfound";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -76,6 +78,7 @@ function App() {
         <Routes>
           <Route
             path="/"
+            exact
             element={
               <>
                 <div id="home">
@@ -94,15 +97,17 @@ function App() {
                   <Platformadvantage />
                 </div>
                 <div id="track">
-                <Readytrack />
+                  <Readytrack />
                 </div>
                 <Footer />
               </>
             }
           />
-
-          <Route exact path="/profile" element={<UserProfile2 />} />
+          <Route element={<PrivateRoutes isLoggedIn={isLoggedIn} />}>
+            <Route element={<UserProfile2 />} path="/Profile" exact />
+          </Route>
           <Route exact path="/contact" element={<Contact />} />
+          <Route path="*" element={<Notfound />} />
         </Routes>
         {modal && (
           <Login
