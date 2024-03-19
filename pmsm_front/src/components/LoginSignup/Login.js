@@ -106,7 +106,7 @@ const Login = (props) => {
   }
   return (
     <div>
-      <div classNameName="modal">
+      <div className="modal">
         <div
           onClick={() => {
             props.setOpenModal();
@@ -134,7 +134,7 @@ const Login = (props) => {
                 <form className="space-y-4 md:space-y-6" action="POST">
                   <div>
                     <label
-                      for="User Id"
+                      htmlFor="User Id"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                       Your User Id
@@ -153,7 +153,7 @@ const Login = (props) => {
                   </div>
                   <div>
                     <label
-                      for="Vehicle Id"
+                      htmlFor="Vehicle Id"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                       Your Vehicle Id
@@ -172,7 +172,7 @@ const Login = (props) => {
                   </div>
                   <div>
                     <label
-                      for="password"
+                      htmlFor="password"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                       Password
@@ -249,7 +249,7 @@ const Login = (props) => {
                   <div className="grid gap-4 mb-4 sm:grid-cols-2">
                     <div>
                       <label
-                        for="userid"
+                        htmlFor="userid"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         User Id
@@ -267,7 +267,7 @@ const Login = (props) => {
                     </div>
                     <div>
                       <label
-                        for="vehicleid"
+                        htmlFor="vehicleid"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Vehicle Id
@@ -285,7 +285,7 @@ const Login = (props) => {
                     </div>
                     <div>
                       <label
-                        for="email"
+                        htmlFor="email"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Email Id
@@ -301,7 +301,7 @@ const Login = (props) => {
                     </div>
                     <div>
                       <label
-                        for="category"
+                        htmlFor="category"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         User Type
@@ -317,7 +317,7 @@ const Login = (props) => {
                     </div>
                     <div>
                       <label
-                        for="contactnumber"
+                        htmlFor="contactnumber"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Contact Number
@@ -333,7 +333,7 @@ const Login = (props) => {
                     </div>
                     <div>
                       <label
-                        for="address"
+                        htmlFor="address"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Address
@@ -349,7 +349,7 @@ const Login = (props) => {
                     </div>
                     <div>
                       <label
-                        for="password"
+                        htmlFor="password"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Password
@@ -368,7 +368,7 @@ const Login = (props) => {
                     </div>
                     <div>
                       <label
-                        for="password"
+                        htmlFor="password"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Re Enter Password
