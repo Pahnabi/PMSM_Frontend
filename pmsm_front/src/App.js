@@ -103,9 +103,9 @@ function App() {
               </>
             }
           />
-          <Route element={<PrivateRoutes isLoggedIn={isLoggedIn} />}>
+          {/* <Route element={<PrivateRoutes isLoggedIn={isLoggedIn} />}> */}
             <Route element={<UserProfile2 />} path="/Profile" exact />
-          </Route>
+          {/* </Route> */}
           <Route exact path="/contact" element={<Contact />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
