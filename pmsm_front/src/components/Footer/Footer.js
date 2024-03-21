@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import Link from "react-scroll";
 
 function Footer() {
   return (
@@ -95,6 +96,7 @@ function Footer() {
             </a>
           </li>
           <li>
+            
             <a href="#" className="mr-4 hover:underline md:mr-6">
               Careers
             </a>

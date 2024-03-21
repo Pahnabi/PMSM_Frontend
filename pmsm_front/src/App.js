@@ -14,6 +14,8 @@ import Adaptiveplatform from "./components/Adaptiveplatform/Adaptiveplatform";
 import Platformadvantage from "./components/Platformadvantage/Platformadvantage";
 import Contact from "./components/Contact/Contact";
 import PrivateRoutes from "./utils/PrivateRoutes";
+import Career from "./components/Careers/Career";
+import Faqs from "./components/Faqs/Faqs";
 import Notfound from "./components/NotFound/Notfound";
 
 function App() {
@@ -98,6 +100,12 @@ function App() {
                 </div>
                 <div id="track">
                   <Readytrack />
+                </div>
+                <div id="career">
+                  <Career />
+                </div>
+                <div id="faqs">
+                  <Faqs />
                 </div>
                 <Footer />
               </>
