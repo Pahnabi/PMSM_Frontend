@@ -4,8 +4,7 @@ import BatteryComponent from "./BatteryComponent";
 import EVHealth from "./EVHealth";
 import Temp from "./Temp"
 import Humidity from "./Humidity"
-import WeatherData from "./WeatherData";
-import ChargeHistory from "./ChargeHistory";
+// import WeatherData from "./WeatherData";
 
 const Box3 = () => {
   // return (
