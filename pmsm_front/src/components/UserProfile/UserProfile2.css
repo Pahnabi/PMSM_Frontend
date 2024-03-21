@@ -23,6 +23,24 @@
     box-sizing: border-box;
 }
 
+.box4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box4 .cr-graph{
+    width: 100%;
+    height: 100%;
+}
+
+.box4 .fr-graph{
+    width: 100%;
+    height: 100%;
+}
 @media screen and (max-width:768px){
     .user-profile-2 {
         display: grid;
