@@ -68,12 +68,12 @@ body {
     background-color: var(--container-color);
     padding: 1.5rem 2rem;
     border-radius: 1.5rem;
-    /* display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center; */
-    display: flex;
+    align-items: center;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-around; */
 }
 
 .battery__text {
