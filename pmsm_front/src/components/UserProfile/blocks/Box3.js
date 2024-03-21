@@ -2,6 +2,8 @@ import React from "react";
 import "./Box3.css";
 import BatteryComponent from "./BatteryComponent";
 import EVHealth from "./EVHealth";
+import Temp from "./Temp"
+import Humidity from "./Humidity"
 import WeatherData from "./WeatherData";
 import ChargeHistory from "./ChargeHistory";
 
@@ -27,7 +29,7 @@ const Box3 = () => {
       <BatteryComponent />
       </div>
       <div className="box3-card-1">
-        
+        <Temp/>
       </div>
       <div className="box3-card-1">
       <div className="evhealth">
@@ -35,6 +37,7 @@ const Box3 = () => {
       </div>
       </div>
       <div className="box3-card-1">
+        <Humidity/>
       </div>
     </div>
   );
