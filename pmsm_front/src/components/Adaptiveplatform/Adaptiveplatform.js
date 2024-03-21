@@ -35,7 +35,7 @@ function Adaptiveplatform() {
                 <span className="material-symbols-outlined">rule_settings</span>
               </div>
               <h3 className="adaptive-subheading mb-2 text-xl font-bold dark:text-white">
-                Alets & Rules ENgine
+                Alerts & Rules Engine
               </h3>
               <p className="text-gray-500 dark:text-gray-400">
                 Automated & Manual role creation & processing
