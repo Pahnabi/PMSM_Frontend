@@ -19,7 +19,7 @@
             hsl(92, 90%, 68%) 100%);
     /* --container-color: #fff; */
     --body-color: hsl(0, 0%, 11%);
-    --text-color: hsl(0, 0%, 9%);
+    --text-color: hsl(0, 4%, 89%);
 
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/

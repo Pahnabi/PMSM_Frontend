@@ -24,13 +24,17 @@ const Box3 = () => {
   return (
     <div className="box3">
       <div className="box3-card-1">
-        <BatteryComponent />
+        <div className="box3-box">
+          <BatteryComponent />
+        </div>
       </div>
       <div className="box3-card-1">
         <Temp />
       </div>
       <div className="box3-card-1">
-        <EVHealth healthvalue={80} />
+        <div className="box3-box">
+          <EVHealth healthvalue={80} />
+        </div>
       </div>
       <div className="box3-card-1">
         <Humidity />
