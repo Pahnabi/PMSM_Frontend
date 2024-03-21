@@ -45,6 +45,7 @@ const RatingComponent = ({valueused}) => {
 
 const EVHealth = ({healthvalue}) => {
     return (
+      <div className="evhealth">
         <div className="ev_card">
             <div className="ev_rating">
                 <RatingComponent valueused={healthvalue}/>
@@ -52,6 +53,7 @@ const EVHealth = ({healthvalue}) => {
                 <div className="ev_block"></div>
             </div>
         </div>
+      </div>
     );
 }
 export default EVHealth;
