@@ -1,3 +1,9 @@
+.evhealth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .ev_card{
     /* position: absolute; */
   /* top: 50%; */
