@@ -1,6 +1,10 @@
 .car-image-box{
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     /* background-color: black; */
 }
 
@@ -11,6 +15,7 @@
 }
 
 .car-image-box-overlay-text{
+    /* font-family: 'Oswald', sans-serif; */
     position: absolute;
     top: 0;
     left: 0;
@@ -18,4 +23,12 @@
     color: #000;
     /* font-weight: bold; */
     font-size: 2vw;
+    text-align: center;
+    width: 100%;
+}
+
+.car-image
+{
+    margin-bottom: 20px;
+    opacity: 0;
 }
