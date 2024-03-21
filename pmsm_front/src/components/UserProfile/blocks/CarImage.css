@@ -1,6 +1,7 @@
 .car-image-box{
     position: relative;
     display: inline-block;
+    /* background-color: black; */
 }
 
 .car-image-box img{
