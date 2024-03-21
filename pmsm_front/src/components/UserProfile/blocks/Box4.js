@@ -192,7 +192,7 @@ export default function Box4() {
           }}
         >
           {/* <CartesianGrid strokeDasharray="5 5" /> */}
-          {/* <XAxis dataKey="Time" /> */}
+          <XAxis dataKey="Time" tick={false} />
           <YAxis />
           <Tooltip />
           <Legend />
