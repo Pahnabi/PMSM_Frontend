@@ -9,6 +9,7 @@ import Home from "./components/LandingPage/Home";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/LoginSignup/Login";
 import UserProfile2 from "./components/UserProfile/UserProfile2";
+import MfPage from "./components/MfPage/MfPage";
 import Readytrack from "./components/Readytrack/Readytrack";
 import Adaptiveplatform from "./components/Adaptiveplatform/Adaptiveplatform";
 import Platformadvantage from "./components/Platformadvantage/Platformadvantage";
@@ -113,6 +114,7 @@ function App() {
           />
           {/* <Route element={<PrivateRoutes isLoggedIn={isLoggedIn} />}> */}
             <Route element={<UserProfile2 />} path="/Profile" exact />
+            <Route element={<MfPage />} path="/MF" exact />
           {/* </Route> */}
           <Route exact path="/contact" element={<Contact />} />
           <Route path="*" element={<Notfound />} />
