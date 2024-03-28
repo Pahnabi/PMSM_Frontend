@@ -40,3 +40,13 @@
     width: 100%;
     height: 100%;
 }
+
+.mf-page-box-4{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.mf-page-card-2{
+    gap: 1rem;
+}

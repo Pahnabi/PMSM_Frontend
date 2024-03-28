@@ -4,7 +4,8 @@ import MfCarImg from "./blocks/MfCarImg";
 import GraphCurrent from "./blocks/GraphCurrent";
 import GraphFreq from "./blocks/GraphFreq";
 import Box3 from "../UserProfile/blocks/Box3";
-// import Box2 from "./blocks/Box2";
+// import MfBox4 from "./blocks/MfBox4";
+import DisplayCard from "./blocks/DisplayCard";
 
 const MfPage = () => {
   return (
@@ -25,7 +26,22 @@ const MfPage = () => {
       <div className="mf-page-card-1">
         <Box3 />
       </div>
-      <div className="mf-page-card-1"></div>
+      <div className="mf-page-card-1">
+        <div className="mf-page-box-4">
+          <div className="mf-page-card-2">
+            <DisplayCard />
+            <DisplayCard />
+            <DisplayCard />
+            <DisplayCard />
+          </div>
+          <div className="mf-page-card-2">
+            <DisplayCard />
+            <DisplayCard />
+            <DisplayCard />
+            <DisplayCard />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
