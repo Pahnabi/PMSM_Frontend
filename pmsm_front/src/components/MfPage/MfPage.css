@@ -50,3 +50,9 @@
 .mf-page-card-2{
     gap: 1rem;
 }
+
+.mf-page-card-2-text{
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}

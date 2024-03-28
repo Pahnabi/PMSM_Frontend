@@ -29,12 +29,20 @@ const MfPage = () => {
       <div className="mf-page-card-1">
         <div className="mf-page-box-4">
           <div className="mf-page-card-2">
+            <p className="mf-page-card-2-text">
+            Fault History
+
+            </p>
             <DisplayCard />
             <DisplayCard />
             <DisplayCard />
             <DisplayCard />
           </div>
           <div className="mf-page-card-2">
+          <p className="mf-page-card-2-text">
+
+            Service History
+          </p>
             <DisplayCard />
             <DisplayCard />
             <DisplayCard />
