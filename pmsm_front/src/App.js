@@ -102,21 +102,23 @@ function App() {
                 <div id="track">
                   <Readytrack />
                 </div>
-                <div id="career">
+                {/* <div id="career">
                   <Career />
                 </div>
                 <div id="faqs">
                   <Faqs />
-                </div>
+                </div> */}
                 <Footer />
               </>
             }
           />
           {/* <Route element={<PrivateRoutes isLoggedIn={isLoggedIn} />}> */}
-            <Route element={<UserProfile2 />} path="/Profile" exact />
-            <Route element={<MfPage />} path="/MF" exact />
+          <Route element={<UserProfile2 />} path="/Profile" exact />
+          <Route element={<MfPage />} path="/MF" exact />
           {/* </Route> */}
           <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/career" element={<Career />} />
+          <Route exact path="/faqs" element={<Faqs />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
         {modal && (
