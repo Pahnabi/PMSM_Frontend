@@ -21,3 +21,22 @@
     height: 100%;
     box-sizing: border-box;
 }
+
+.box2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 .mf-cr-graph{
+    width: 100%;
+    height: 100%;
+}
+
+.box2 .mf-fr-graph{
+    width: 100%;
+    height: 100%;
+}
