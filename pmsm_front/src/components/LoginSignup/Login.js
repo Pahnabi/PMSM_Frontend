@@ -35,11 +35,17 @@ const Login = (props) => {
             props.notifysuccess("Login successful");
 
             localStorage.setItem("authToken", res.data.authToken);
+            localStorage.setItem("userType", res.data.userType);
             localStorage.setItem("isLoggedIn", "true");
 
             props.setOpenModal();
             props.setLogstat();
-            navigate("/Profile");
+            console.log(res.data.userType);
+            if (res.data.userType === "Owner") {
+              navigate("/Owner"); 
+            } else {
+              navigate("/Manufacturer");
+            }
           } else {
             console.log(res);
           }
@@ -81,10 +87,15 @@ const Login = (props) => {
           if (res.status === 201) {
             props.notifysuccess("Signup successful");
             localStorage.setItem("authToken", res.data.authToken);
+            localStorage.setItem("userType", res.data.userType);
             localStorage.setItem("isLoggedIn", "true");
             props.setOpenModal();
             props.setLogstat();
-            navigate("/Profile");
+            if (res.data.userType === "Owner") {
+              navigate("/Owner"); // Route to UserProfile2 for owner
+            } else {
+              navigate("/Manufacturer"); // Route to UserProfile1 for others
+            }
           } else {
             console.log(res);
           }

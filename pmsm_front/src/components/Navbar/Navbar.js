@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 function Navbar(props) {
   const location = useLocation();
+  const userType = localStorage.getItem("userType");
   // const location="";
 
   const navigate = useNavigate();
@@ -45,6 +46,14 @@ function Navbar(props) {
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
     console.log(sidebarOpen);
+  };
+
+  const handleProfileClick = () => {
+    if (userType === "Owner") {
+      navigate("/Owner"); // Route to UserProfile2 for owner
+    } else {
+      navigate("/Manufacturer"); // Route to UserProfile1 for others
+    }
   };
 
   return (
@@ -161,43 +170,39 @@ function Navbar(props) {
                 </button>
               </li>
             )}
-            {props.isLoggedIn && location.pathname === "/Profile" && (
-              <>
-                <li>
-                  <button
-                    onClick={() => {
-                      navigate("/");
-                    }}
-                  >
-                    Home
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => {
-                      navigate("/");
-                      localStorage.removeItem("authToken");
-                      localStorage.removeItem("isLoggedIn");
-                      props.setLogstat();
-                      props.notifysuccess("Successfully Logged out");
-                      console.log(location.pathname);
-                    }}
-                  >
-                    Logout
-                  </button>
-                </li>
-              </>
-            )}
+            {props.isLoggedIn &&
+              (location.pathname === "/Owner" ||
+                location.pathname === "/Manufacturer") && (
+                <>
+                  <li>
+                    <button
+                      onClick={() => {
+                        navigate("/");
+                      }}
+                    >
+                      Home
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => {
+                        navigate("/");
+                        localStorage.removeItem("authToken");
+                        localStorage.removeItem("isLoggedIn");
+                        props.setLogstat();
+                        props.notifysuccess("Successfully Logged out");
+                        console.log(location.pathname);
+                      }}
+                    >
+                      Logout
+                    </button>
+                  </li>
+                </>
+              )}
             {props.isLoggedIn && location.pathname === "/" && (
               <>
                 <li>
-                  <button
-                    onClick={() => {
-                      navigate("/Profile");
-                    }}
-                  >
-                    My Profile
-                  </button>
+                  <button onClick={handleProfileClick}>My Profile</button>
                 </li>
               </>
             )}
