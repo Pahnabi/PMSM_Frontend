@@ -12,8 +12,8 @@ const FaultHistory = () => {
 
   async function fetchHistory() {
     axios
-      // .get("http://10.29.8.31:5000/fault-history/get", {
-      .get("http://localhost:5000/fault-history/get", {
+      .get("http://10.29.8.31:5000/fault-history/get", {
+      // .get("http://localhost:5000/fault-history/get", {
         params: {
           vehicleid: vehicleid,
         },
