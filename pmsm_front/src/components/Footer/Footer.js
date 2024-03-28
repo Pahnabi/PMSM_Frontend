@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import Link from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Footer() {
   return (
@@ -17,9 +17,11 @@ function Footer() {
         </p>
         <ul className="footer-main-heading flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
           <li>
-            <a href="#about" className="mr-4 hover:underline md:mr-6 ">
-              About Us
-            </a>
+            <div className="mr-4 hover:underline md:mr-6 ">
+              <Link to="about" spy={true} smooth={true} duration={500}>
+                About Us
+              </Link>
+            </div>
           </li>
           <li>
             <a href="/career" className="mr-4 hover:underline md:mr-6">
