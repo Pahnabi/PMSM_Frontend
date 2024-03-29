@@ -29,13 +29,13 @@ const FaultHistory = () => {
 
   return (
     <div>
-      <p style={{ color: "black", fontSize: "3.5vh", textAlign: "center", marginBottom:'0.5rem' }}>
+      <p style={{ color: "black", fontSize: "2.5vh", textAlign: "center", marginBottom:'0.5rem' }}>
         Fault History
       </p>
 
       <div
         className="overflow-y-scroll"
-        style={{ height: "480px", borderRadius: "1rem", scrollbarWidth: "none" }}
+        style={{ height: "520px", borderRadius: "1rem", scrollbarWidth: "none" }}
       >
         {data.map((entry) => (
           <DisplayCard
