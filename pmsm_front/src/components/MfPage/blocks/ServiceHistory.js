@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./FaultHistory.css";
+// import "./FaultHistory.css";
 import axios from "axios";
 import DisplayCard from "./DisplayCard";
 
