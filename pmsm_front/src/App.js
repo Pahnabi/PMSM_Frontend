@@ -14,7 +14,7 @@ import Readytrack from "./components/Readytrack/Readytrack";
 import Adaptiveplatform from "./components/Adaptiveplatform/Adaptiveplatform";
 import Platformadvantage from "./components/Platformadvantage/Platformadvantage";
 import Contact from "./components/Contact/Contact";
-import PrivateRoutes from "./utils/PrivateRoutes";
+// import PrivateRoutes from "./utils/PrivateRoutes";
 import Career from "./components/Careers/Career";
 import Faqs from "./components/Faqs/Faqs";
 import Notfound from "./components/NotFound/Notfound";
