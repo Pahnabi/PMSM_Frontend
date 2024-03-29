@@ -5,7 +5,7 @@ import "./FaultHistory.css";
 
 const FaultHistory = () => {
   const [data, setData] = useState([]);
-  const [vehicleid, setVehicleid] = useState("hero");
+  const [vehicleid] = useState("hero");
   useEffect(() => {
     fetchHistory(); 
   }, []); 

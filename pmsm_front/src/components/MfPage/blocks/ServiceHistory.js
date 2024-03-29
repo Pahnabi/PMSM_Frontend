@@ -5,7 +5,7 @@ import DisplayCard from "./DisplayCard";
 
 function ServiceHistory() {
     const [data, setData] = useState([]);
-    const [vehicleid, setVehicleid] = useState("hero");
+    const [vehicleid] = useState("hero");
     useEffect(() => {
       fetchHistory();
     }, []);
