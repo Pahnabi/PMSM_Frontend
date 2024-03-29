@@ -55,8 +55,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .user-profile-box3{
+    .box3{
         grid-template-columns: 1fr;  /* One column for 1x4 layout */
-    grid-template-rows: 2fr 1fr;
     }
 }
